@@ -347,7 +347,7 @@ export default function Home() {
         </p>
 
         <form
-          action="https://formsubmit.co/espoirativon@gmail.com"
+          action="https://formsubmit.co/72d335bca3d75242e0d294f7e70216b1"
           method="POST"
           className="space-y-4 bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow"
         >
@@ -355,7 +355,7 @@ export default function Home() {
           <input
             type="hidden"
             name="_next"
-            value="https://yourdomain.com/thanks"
+            value="https://espoir-ativon.vercel.app#contact"
           />
 
           <div>
