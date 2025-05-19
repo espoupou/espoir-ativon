@@ -2,7 +2,12 @@ import './styles/globals.css';
 
 export const metadata = {
   title: 'ONEOF - Boss Overcoming',
-  description: 'Portfolio de sbi7i',
+  description: 'Kokou Espoir ATIVON',
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/favicon.ico',
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
