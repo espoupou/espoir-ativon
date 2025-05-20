@@ -2,6 +2,7 @@ import './styles/globals.css';
 
 export const metadata = {
   title: 'Kokou Espoir ATIVON',
+  description: 'Portfolio web app showcasing projects and skills by Kokou Espoir ATIVON.'
     icons: {
         icon: '/favicon.ico',
         shortcut: '/favicon.ico',
