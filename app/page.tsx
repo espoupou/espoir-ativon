@@ -427,7 +427,7 @@ export default function Home() {
         </div>
 
         <p className="text-center text-sm mt-4 text-gray-500">
-          Rabat, Maroc — espoirativon@gmail.com
+          Longuenesse, France — espoirativon@gmail.com
         </p>
       </section>
 
