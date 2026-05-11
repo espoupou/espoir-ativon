@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: #F7F5EF;
+  --background-secondary: #FFFFFF;
+  --cards: #FFFFFF;
+  --foreground: #111111;
+  --foreground-secondary: #555555;
+  --border: rgba(0, 0, 0, 0.10);
+  
+  --accent-green: #008F5A;
+  --accent-yellow: #D79A00;
+  --accent-blue: #1D4ED8;
+  --accent-grey: #64748B;
+}
+
+.dark {
+  --background: #050606;
+  --background-secondary: #0B0F0E;
+  --cards: #101413;
+  --foreground: #F5F5F0;
+  --foreground-secondary: #B8B8B8;
+  --border: rgba(255, 255, 255, 0.12);
+  
+  --accent-green: #00E676;
+  --accent-yellow: #FFC400;
+  --accent-blue: #60A5FA;
+  --accent-grey: #94A3B8;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-cards: var(--cards);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-border: var(--border);
+  
+  --color-accent-green: var(--accent-green);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-grey: var(--accent-grey);
+
+  --font-sans: var(--font-inter, ui-sans-serif), system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk, ui-sans-serif), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, ui-monospace), SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
