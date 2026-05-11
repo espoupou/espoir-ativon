@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import { GithubIcon } from "@/components/icons";
-import { BatteryCharging, Code2, Database, FileSpreadsheet, FlaskConical, LineChart, Settings } from "lucide-react";
+import { Activity, BatteryCharging, Code2, Database, FileSpreadsheet, FlaskConical, LineChart, Settings } from "lucide-react";
 
 export default function BatteriesPage() {
   const { language } = useLanguage();
@@ -17,25 +17,25 @@ export default function BatteriesPage() {
   const content = project.content;
 
   const refactoringSteps = [
-    { 
-      title: language === "fr" ? "Identifier les parties de l’application" : "Identify application parts", 
-      description: language === "fr" ? "Séparer l’interface principale, les dialogues, les fenêtres spécialisées et les cœurs de calcul." : "Separate the main interface, dialogs, specialized windows, and core processing engines." 
+    {
+      title: language === "fr" ? "Identifier les parties de l’application" : "Identify application parts",
+      description: language === "fr" ? "Séparer l’interface principale, les dialogues, les fenêtres spécialisées et les cœurs de calcul." : "Separate the main interface, dialogs, specialized windows, and core processing engines."
     },
-    { 
-      title: language === "fr" ? "Préserver la logique existante" : "Preserve existing logic", 
-      description: language === "fr" ? "Garder les modules de traitement EIS et DRT pour ne pas casser les fonctionnalités." : "Keep EIS and DRT processing modules intact to avoid breaking functionality." 
+    {
+      title: language === "fr" ? "Préserver la logique existante" : "Preserve existing logic",
+      description: language === "fr" ? "Garder les modules de traitement EIS et DRT pour ne pas casser les fonctionnalités." : "Keep EIS and DRT processing modules intact to avoid breaking functionality."
     },
-    { 
-      title: language === "fr" ? "Améliorer la maintenabilité" : "Improve maintainability", 
-      description: language === "fr" ? "Répartir le code en fichiers spécialisés pour faciliter les corrections et évolutions." : "Distribute the code into specialized files to facilitate fixes and future evolutions." 
+    {
+      title: language === "fr" ? "Améliorer la maintenabilité" : "Improve maintainability",
+      description: language === "fr" ? "Répartir le code en fichiers spécialisés pour faciliter les corrections et évolutions." : "Distribute the code into specialized files to facilitate fixes and future evolutions."
     },
-    { 
-      title: language === "fr" ? "Structurer l’expérience utilisateur" : "Structure user experience", 
-      description: language === "fr" ? "Proposer des fenêtres dédiées selon le besoin : preprocessing, workbook plotting, DRT plotting." : "Provide dedicated windows based on needs: preprocessing, workbook plotting, DRT plotting." 
+    {
+      title: language === "fr" ? "Structurer l’expérience utilisateur" : "Structure user experience",
+      description: language === "fr" ? "Proposer des fenêtres dédiées selon le besoin : preprocessing, workbook plotting, DRT plotting." : "Provide dedicated windows based on needs: preprocessing, workbook plotting, DRT plotting."
     },
-    { 
-      title: language === "fr" ? "Visualiser les résultats" : "Visualize results", 
-      description: language === "fr" ? "Utiliser les graphes Nyquist et les comparaisons pour faciliter l’interprétation." : "Use Nyquist plots and comparisons to ease interpretation." 
+    {
+      title: language === "fr" ? "Visualiser les résultats" : "Visualize results",
+      description: language === "fr" ? "Utiliser les graphes Nyquist et les comparaisons pour faciliter l’interprétation." : "Use Nyquist plots and comparisons to ease interpretation."
     }
   ];
 
@@ -65,7 +65,7 @@ export default function BatteriesPage() {
       />
 
       <div className="max-w-[800px] mx-auto px-5 md:px-8 mt-16 space-y-20">
-        
+
         {/* 2. Contexte & Problématique */}
         <AnimatedSection>
           <SectionHeading title={language === "fr" ? "Contexte Scientifique" : "Scientific Context"} />
@@ -76,7 +76,7 @@ export default function BatteriesPage() {
                 : "Electrochemical impedance data is often difficult to use directly. It can come from different files, contain varied formats, and require conversions, cleaning, comparisons, and precise visualizations. A dedicated tool reduces manual handling and improves processing traceability."}
             </p>
           </div>
-          
+
           <div className="bg-cards border border-border p-8 rounded-xl shadow-sm border-l-4 border-l-accent-green">
             <h3 className="font-heading font-bold text-xl text-foreground mb-4 flex items-center">
               <FlaskConical className="mr-3 text-accent-green" />
@@ -105,14 +105,14 @@ export default function BatteriesPage() {
               ? "Le projet consistait également à transformer un code initial monolithique en une architecture logicielle propre et maintenable, séparant l'interface graphique (Tkinter) de la logique de calcul scientifique."
               : "The project also involved transforming an initial monolithic code into a clean, maintainable software architecture, separating the graphical interface (Tkinter) from the scientific computing logic."}
           </p>
-          
+
           <ProcessTimeline items={refactoringSteps} orientation="vertical" />
         </AnimatedSection>
 
         {/* 4. Fonctionnalités et Visualisation */}
         <AnimatedSection>
           <SectionHeading title={language === "fr" ? "Fonctionnalités de l'outil" : "Tool Features"} />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
@@ -124,7 +124,7 @@ export default function BatteriesPage() {
                 {language === "fr" ? "Interface principale (Tkinter)" : "Main Interface (Tkinter)"}
               </div>
             </div>
-            
+
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <LineChart className="w-8 h-8 mb-2 text-foreground-secondary/50" />
@@ -135,7 +135,7 @@ export default function BatteriesPage() {
                 {language === "fr" ? "Tracé Nyquist" : "Nyquist Plot"}
               </div>
             </div>
-            
+
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <LineChart className="w-8 h-8 mb-2 text-foreground-secondary/50" />
@@ -146,7 +146,7 @@ export default function BatteriesPage() {
                 {language === "fr" ? "Comparaison de courbes" : "Curve Comparison"}
               </div>
             </div>
-            
+
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Database className="w-8 h-8 mb-2 text-foreground-secondary/50" />
@@ -157,7 +157,7 @@ export default function BatteriesPage() {
                 {language === "fr" ? "Fenêtre de prétraitement" : "Preprocessing Window"}
               </div>
             </div>
-            
+
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Activity className="w-8 h-8 mb-2 text-foreground-secondary/50" />
@@ -168,7 +168,7 @@ export default function BatteriesPage() {
                 {language === "fr" ? "Analyse DRT" : "DRT Analysis"}
               </div>
             </div>
-            
+
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <FileSpreadsheet className="w-8 h-8 mb-2 text-foreground-secondary/50" />
@@ -201,7 +201,7 @@ export default function BatteriesPage() {
                 <li className="flex items-start"><span className="text-accent-green mr-2">🧠</span> <strong>drt_core.py</strong> : {language === "fr" ? "cœur de traitement DRT" : "DRT processing core"}</li>
               </ul>
             </div>
-            
+
             <div className="bg-background-secondary border border-border p-6 rounded-xl">
               <h4 className="font-heading font-semibold text-foreground mb-4 flex items-center">
                 <BatteryCharging className="mr-2 text-accent-green" size={20} />
@@ -217,10 +217,10 @@ export default function BatteriesPage() {
               </ul>
             </div>
           </div>
-          
+
           <div className="mt-8 p-4 bg-accent-green/10 border border-accent-green/20 rounded-lg text-accent-green text-center font-medium italic">
-            {language === "fr" 
-              ? "Il s'agit d'un outil personnel d’analyse de traitement et de visualisation, une base de travail issue de la refactorisation d’un outil scientifique pour l'EIS/DRT." 
+            {language === "fr"
+              ? "Il s'agit d'un outil personnel d’analyse de traitement et de visualisation, une base de travail issue de la refactorisation d’un outil scientifique pour l'EIS/DRT."
               : "This is a personal analysis, processing, and visualization tool, a working foundation resulting from the refactoring of a scientific tool for EIS/DRT."}
           </div>
         </AnimatedSection>
@@ -254,13 +254,13 @@ export default function BatteriesPage() {
               </p>
             </div>
           </div>
-          
+
           <div className="mt-12 text-center text-lg text-foreground-secondary max-w-3xl mx-auto italic">
-            "{language === "fr" 
+            "{language === "fr"
               ? "Ce projet montre ma capacité à développer un outil d’analyse scientifique spécialisé, à structurer un code Python existant et à transformer des données complexes en visualisations exploitables."
               : "This project demonstrates my ability to develop a specialized scientific analysis tool, structure existing Python code, and transform complex data into actionable visualizations."}"
           </div>
-          
+
           <div className="mt-12 text-center">
             <a
               href="https://github.com/espoupou/Batteries"
