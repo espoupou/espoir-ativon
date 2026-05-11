@@ -55,7 +55,7 @@ export default function Footer() {
                 <GithubIcon size={20} />
               </a>
               <a
-                href="mailto:espoir.ativon@example.com"
+                href="mailto:espoirativon@gmail.com"
                 className="text-foreground-secondary hover:text-accent-green transition-colors"
                 aria-label="Email"
               >

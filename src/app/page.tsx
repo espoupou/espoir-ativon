@@ -295,7 +295,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="mailto:espoir.ativon@example.com" className="w-full sm:w-auto px-8 py-3 bg-accent-green text-white font-medium rounded-md shadow-md hover:bg-emerald-600 transition-colors">
+            <a href="mailto:espoirativon@gmail.com" className="w-full sm:w-auto px-8 py-3 bg-accent-green text-white font-medium rounded-md shadow-md hover:bg-emerald-600 transition-colors">
               {t.contact.sendEmail}
             </a>
             <a href={`/cv/cv-${language}.pdf`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
