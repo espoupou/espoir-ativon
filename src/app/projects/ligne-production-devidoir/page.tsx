@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useTranslation } from "@/i18n";
 import { projects } from "@/data/projects";
 import DetailHero from "@/components/DetailHero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,19 +11,58 @@ import ProcessTimeline from "@/components/ProcessTimeline";
 
 export default function DevidoirPage() {
   const { language } = useLanguage();
+  const t = useTranslation(language);
   const project = projects.find((p) => p.id === "ligne-devidoir");
 
   if (!project) return null;
   const content = project.content;
 
-  const gammeOperatoire = [
-    { title: "Structure de base", description: "Assembler les plaques latérales, l'axe et la béquille. Points critiques: alignement et stabilité." },
+  const gammeOperatoire = language === "fr" ? [
+    { title: "Structure de base", description: "Assembler les plaques latérales, l’axe et la béquille. Points critiques : alignement et stabilité." },
     { title: "Montage du timon", description: "Fixation du timon de guidage." },
     { title: "Tambour", description: "Intégrer le tambour dans le châssis et vérifier sa rotation libre sans blocage." },
-    { title: "Injecteur et manivelle", description: "Fixer les éléments liés à la fonction hydraulique. La manivelle doit transmettre l'effort au tambour." },
-    { title: "Roues", description: "Monter les roues de déplacement et vérifier qu'elles tournent sans frottement." },
+    { title: "Injecteur et manivelle", description: "Fixer les éléments liés à la fonction hydraulique et vérifier la transmission de l’effort au tambour." },
+    { title: "Roues", description: "Monter les roues et vérifier leur rotation sans frottement." },
     { title: "Contrôle", description: "Vérification fonctionnelle finale." },
-    { title: "Emballage", description: "Mise en carton." }
+    { title: "Emballage", description: "Mise en carton." },
+  ] : [
+    { title: "Base frame", description: "Assemble the side plates, axle and stand. Critical points: alignment and stability." },
+    { title: "Handle assembly", description: "Attach the guiding handle." },
+    { title: "Drum", description: "Fit the drum into the frame and check that it rotates freely without binding." },
+    { title: "Injector and crank", description: "Attach the hydraulic components and verify that the crank transmits force to the drum." },
+    { title: "Wheels", description: "Fit the wheels and check that they rotate without friction." },
+    { title: "Inspection", description: "Perform the final functional check." },
+    { title: "Packaging", description: "Pack the finished unit." },
+  ];
+
+  const approachItems = language === "fr" ? [
+    { title: "Comprendre", description: "Identification des composants et fonctions." },
+    { title: "Gamme opératoire", description: "Décomposition du montage." },
+    { title: "Observer", description: "Relevé des temps par poste." },
+    { title: "Pertes", description: "Analyse Lean : VSM, 5S et Pareto." },
+    { title: "Rééquilibrer", description: "Répartition cohérente des tâches." },
+    { title: "Simuler", description: "Comparaison de scénarios ARENA." },
+    { title: "Intégrer l’ERP", description: "Structuration dans Axelor." },
+    { title: "Superviser", description: "Prototypage ESP32 et Node-RED." },
+  ] : [
+    { title: "Understand", description: "Identify components and functions." },
+    { title: "Define the sequence", description: "Break the assembly into operations." },
+    { title: "Observe", description: "Record cycle times by station." },
+    { title: "Analyze losses", description: "Apply Lean tools: VSM, 5S and Pareto." },
+    { title: "Rebalance", description: "Redistribute tasks consistently." },
+    { title: "Simulate", description: "Compare ARENA scenarios." },
+    { title: "Integrate the ERP", description: "Structure the process in Axelor." },
+    { title: "Monitor", description: "Prototype with ESP32 and Node-RED." },
+  ];
+
+  const scenarios = language === "fr" ? [
+    { title: "Scénario A", description: "Ligne actuelle, un opérateur par poste. Capacité insuffisante." },
+    { title: "Scénario B", description: "Renforcement du goulot. Débit amélioré et capacité proche de 30 000 unités par mois. Scénario retenu." },
+    { title: "Scénario C", description: "Réorganisation globale. Gains intéressants, mais inférieurs au scénario B." },
+  ] : [
+    { title: "Scenario A", description: "Current line with one operator per station. Capacity remains insufficient." },
+    { title: "Scenario B", description: "Additional capacity at the bottleneck. Improved throughput and capacity close to 30,000 units per month. Selected scenario." },
+    { title: "Scenario C", description: "Full reorganization. Useful gains, but lower than scenario B." },
   ];
 
   return (
@@ -33,14 +73,14 @@ export default function DevidoirPage() {
         tags={content.tools}
         summary={content.summary[language]}
         backLink="/projects"
-        backLabel={language === "fr" ? "Retour aux projets" : "Back to projects"}
+        backLabel={t.projects.back}
       />
 
       <div className="max-w-[800px] mx-auto px-5 md:px-8 mt-16 space-y-24">
         
         {/* Section A & B: Contexte et Problématique */}
         <AnimatedSection>
-          <SectionHeading title={language === "fr" ? "Contexte & Problématique" : "Context & Problematic"} />
+          <SectionHeading title={language === "fr" ? "Contexte et problématique" : "Context and challenge"} />
           <p className="text-foreground-secondary text-lg leading-relaxed mb-8">
             {language === "fr"
               ? "Projet de conception et d'optimisation d'une ligne d'assemblage dédiée à la fabrication de dévidoirs pour tuyaux d'arrosage. L'enjeu industriel était de structurer une ligne capable de produire en série avec un bon niveau de qualité et une cadence suffisante."
@@ -55,7 +95,7 @@ export default function DevidoirPage() {
             <MetricCard 
               title={language === "fr" ? "Objectif pic de demande" : "Peak Demand Objective"}
               value="30 000"
-              description={language === "fr" ? "Unités ciblées par mois. Contrainte: éviter l'ajout d'un second shift." : "Targeted units per month. Constraint: avoid adding a second shift."}
+              description={language === "fr" ? "Unités ciblées par mois. Contrainte : éviter l’ajout d’une deuxième équipe." : "Target units per month. Constraint: avoid adding a second shift."}
             />
           </div>
         </AnimatedSection>
@@ -63,23 +103,12 @@ export default function DevidoirPage() {
         {/* Section C: Démarche */}
         <AnimatedSection>
           <SectionHeading title={language === "fr" ? "Démarche projet" : "Project Approach"} />
-          <ProcessTimeline 
-            items={[
-              { title: "Comprendre", description: "Identification des composants et fonctions." },
-              { title: "Gamme opératoire", description: "Décomposition du montage." },
-              { title: "Observer", description: "Relevé des temps par poste." },
-              { title: "Pertes", description: "Analyse Lean (VSM, 5S, Pareto)." },
-              { title: "Rééquilibrer", description: "Répartition cohérente des tâches." },
-              { title: "Simuler", description: "Scénarios ARENA." },
-              { title: "Intégrer ERP", description: "Axelor." },
-              { title: "Superviser", description: "Prototypage ESP32 / Node-RED." }
-            ]} 
-          />
+          <ProcessTimeline items={approachItems} />
         </AnimatedSection>
 
         {/* Section D & E: Gamme & Temps */}
         <AnimatedSection>
-          <SectionHeading title={language === "fr" ? "Gamme opératoire & Temps" : "Routing & Times"} />
+          <SectionHeading title={language === "fr" ? "Gamme opératoire et temps" : "Routing and times"} />
           <p className="text-foreground-secondary text-lg mb-6">
             {language === "fr"
               ? "Les chronométrages ont montré un déséquilibre important. Le poste 1 ressort comme le poste goulot (environ 30s) avec une forte variabilité."
@@ -93,7 +122,7 @@ export default function DevidoirPage() {
                 <div className="w-1/5 flex flex-col justify-end items-center group">
                   <span className="text-xs font-mono mb-1 text-foreground-secondary group-hover:text-foreground">29.6s</span>
                   <div className="w-full bg-accent-red/80 dark:bg-red-500/80 h-[100%] rounded-t-md"></div>
-                  <span className="text-xs mt-2 font-medium">P1 (Goulot)</span>
+                  <span className="text-xs mt-2 font-medium">P1 ({language === "fr" ? "Goulot" : "Bottleneck"})</span>
                 </div>
                 <div className="w-1/5 flex flex-col justify-end items-center group">
                   <span className="text-xs font-mono mb-1 text-foreground-secondary group-hover:text-foreground">25.5s</span>
@@ -118,7 +147,7 @@ export default function DevidoirPage() {
               </div>
               {/* Takt time line */}
               <div className="relative w-full border-t border-dashed border-accent-yellow -mt-[66px] z-10 flex justify-end">
-                <span className="bg-background text-xs font-mono text-accent-yellow px-1 absolute right-0 -top-2">Takt Time ~20s</span>
+                <span className="bg-background text-xs font-mono text-accent-yellow px-1 absolute right-0 -top-2">{language === "fr" ? "Takt time" : "Takt time"} ≈ 20 s</span>
               </div>
             </div>
           </div>
@@ -136,20 +165,20 @@ export default function DevidoirPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-gray-400">
-              <h4 className="font-heading font-bold text-foreground mb-2">Scénario A</h4>
-              <p className="text-sm text-foreground-secondary">Ligne actuelle, 1 opérateur/poste. Capacité insuffisante.</p>
+              <h4 className="font-heading font-bold text-foreground mb-2">{scenarios[0].title}</h4>
+              <p className="text-sm text-foreground-secondary">{scenarios[0].description}</p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-green shadow-md relative">
               <div className="absolute top-2 right-2 flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-accent-green"></span>
               </div>
-              <h4 className="font-heading font-bold text-foreground mb-2">Scénario B</h4>
-              <p className="text-sm text-foreground-secondary">Renforcement du goulot. Débit amélioré, capacité ~30k unités/mois. Retenu.</p>
+              <h4 className="font-heading font-bold text-foreground mb-2">{scenarios[1].title}</h4>
+              <p className="text-sm text-foreground-secondary">{scenarios[1].description}</p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-blue">
-              <h4 className="font-heading font-bold text-foreground mb-2">Scénario C</h4>
-              <p className="text-sm text-foreground-secondary">Réorganisation globale. Gains intéressants mais inférieurs au scénario B.</p>
+              <h4 className="font-heading font-bold text-foreground mb-2">{scenarios[2].title}</h4>
+              <p className="text-sm text-foreground-secondary">{scenarios[2].description}</p>
             </div>
           </div>
         </AnimatedSection>
@@ -163,25 +192,25 @@ export default function DevidoirPage() {
               : "Prototyping a system to monitor performance in real-time. Calculation of OEE indicators."}
           </p>
           <div className="bg-background-secondary border border-border p-6 rounded-xl font-mono text-sm mb-8 text-center shadow-sm">
-            Capteurs → ESP32 → MQTT → Node-RED → MySQL → Dashboard
+            {language === "fr" ? "Capteurs" : "Sensors"} → ESP32 → MQTT → Node-RED → MySQL → {language === "fr" ? "Tableau de bord" : "Dashboard"}
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-cards border border-border p-4 rounded-xl text-center">
-              <h4 className="font-bold text-accent-blue mb-1">TP</h4>
+              <h4 className="font-bold text-accent-blue mb-1">{language === "fr" ? "TP" : "P"}</h4>
               <p className="text-xs text-foreground-secondary">Performance</p>
             </div>
             <div className="bg-cards border border-border p-4 rounded-xl text-center">
-              <h4 className="font-bold text-accent-blue mb-1">TD</h4>
-              <p className="text-xs text-foreground-secondary">Disponibilité</p>
+              <h4 className="font-bold text-accent-blue mb-1">{language === "fr" ? "TD" : "A"}</h4>
+              <p className="text-xs text-foreground-secondary">{language === "fr" ? "Disponibilité" : "Availability"}</p>
             </div>
             <div className="bg-cards border border-border p-4 rounded-xl text-center">
-              <h4 className="font-bold text-accent-blue mb-1">TQ</h4>
-              <p className="text-xs text-foreground-secondary">Qualité</p>
+              <h4 className="font-bold text-accent-blue mb-1">{language === "fr" ? "TQ" : "Q"}</h4>
+              <p className="text-xs text-foreground-secondary">{language === "fr" ? "Qualité" : "Quality"}</p>
             </div>
             <div className="bg-cards border border-accent-green p-4 rounded-xl text-center shadow-sm">
-              <h4 className="font-bold text-accent-green mb-1">TRS</h4>
-              <p className="text-xs text-foreground-secondary">Global</p>
+              <h4 className="font-bold text-accent-green mb-1">{language === "fr" ? "TRS" : "OEE"}</h4>
+              <p className="text-xs text-foreground-secondary">{language === "fr" ? "Global" : "Overall"}</p>
             </div>
           </div>
         </AnimatedSection>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useTranslation } from "@/i18n";
+import Image from "next/image";
 import { projects } from "@/data/projects";
 import DetailHero from "@/components/DetailHero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,6 +13,7 @@ import { BarChart, Box, Database, RefreshCw, Timer, Workflow } from "lucide-reac
 
 export default function KanbanSimulationPage() {
   const { language } = useLanguage();
+  const t = useTranslation(language);
   const project = projects.find((p) => p.id === "kanban");
 
   if (!project) return null;
@@ -19,7 +22,7 @@ export default function KanbanSimulationPage() {
   const simulationSteps = [
     { 
       title: language === "fr" ? "Initialisation" : "Initialization", 
-      description: language === "fr" ? "Les niveaux de stock, temps de traitement, seuils et durée de shift sont définis au départ." : "Stock levels, processing times, thresholds, and shift duration are defined." 
+      description: language === "fr" ? "Les niveaux de stock, temps de traitement, seuils et durée d’équipe sont définis au départ." : "Stock levels, processing times, thresholds and shift duration are defined."
     },
     { 
       title: language === "fr" ? "Consommation" : "Consumption", 
@@ -52,7 +55,7 @@ export default function KanbanSimulationPage() {
         tags={content.tools}
         summary={content.summary[language]}
         backLink="/projects"
-        backLabel={language === "fr" ? "Retour aux projets" : "Back to projects"}
+        backLabel={t.projects.back}
         buttons={
           project.github && (
             <a
@@ -62,7 +65,7 @@ export default function KanbanSimulationPage() {
               className="inline-flex items-center px-5 py-2.5 bg-background border border-border rounded-md text-foreground hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors shadow-sm font-medium"
             >
               <GithubIcon size={18} className="mr-2" />
-              {language === "fr" ? "Voir le dépôt GitHub" : "View GitHub Repository"}
+              {t.projects.githubRepository}
             </a>
           )
         }
@@ -92,7 +95,7 @@ export default function KanbanSimulationPage() {
           <div className="bg-cards border border-border p-8 rounded-xl shadow-sm border-l-4 border-l-accent-yellow">
             <h3 className="font-heading font-bold text-xl text-foreground mb-4 flex items-center">
               <Box className="mr-3 text-accent-yellow" />
-              {language === "fr" ? "Problématique : Dimensionnement des stocks" : "Problematic: Stock Sizing"}
+              {language === "fr" ? "Problématique : dimensionnement des stocks" : "Challenge: stock sizing"}
             </h3>
             <p className="text-foreground-secondary text-lg leading-relaxed">
               {language === "fr"
@@ -104,7 +107,7 @@ export default function KanbanSimulationPage() {
 
         {/* 4. Ligne simulée & 5. Logique Kanban */}
         <AnimatedSection>
-          <SectionHeading title={language === "fr" ? "Ligne simulée & Logique Kanban" : "Simulated Line & Kanban Logic"} />
+          <SectionHeading title={language === "fr" ? "Ligne simulée et logique Kanban" : "Simulated line and Kanban logic"} />
           <p className="text-foreground-secondary text-lg mb-8">
             {language === "fr"
               ? "La simulation représente une ligne de production composée de quatre postes. Chaque poste possède son propre temps de traitement, un niveau de stock, un seuil de déclenchement Kanban et une logique de réapprovisionnement."
@@ -116,28 +119,28 @@ export default function KanbanSimulationPage() {
               <div className="w-16 h-16 bg-accent-blue/10 rounded-full flex items-center justify-center mb-3 border border-accent-blue/20">
                 <span className="font-bold text-accent-blue text-xl">1</span>
               </div>
-              <h4 className="font-semibold text-foreground">Cutting</h4>
+              <h4 className="font-semibold text-foreground">{language === "fr" ? "Découpe" : "Cutting"}</h4>
             </div>
             <div className="text-border hidden md:block z-10">→</div>
             <div className="flex flex-col items-center p-4 z-10">
               <div className="w-16 h-16 bg-accent-blue/10 rounded-full flex items-center justify-center mb-3 border border-accent-blue/20">
                 <span className="font-bold text-accent-blue text-xl">2</span>
               </div>
-              <h4 className="font-semibold text-foreground">Folding</h4>
+              <h4 className="font-semibold text-foreground">{language === "fr" ? "Pliage" : "Folding"}</h4>
             </div>
             <div className="text-border hidden md:block z-10">→</div>
             <div className="flex flex-col items-center p-4 z-10">
               <div className="w-16 h-16 bg-accent-blue/10 rounded-full flex items-center justify-center mb-3 border border-accent-blue/20">
                 <span className="font-bold text-accent-blue text-xl">3</span>
               </div>
-              <h4 className="font-semibold text-foreground">Bonding</h4>
+              <h4 className="font-semibold text-foreground">{language === "fr" ? "Collage" : "Bonding"}</h4>
             </div>
             <div className="text-border hidden md:block z-10">→</div>
             <div className="flex flex-col items-center p-4 z-10">
               <div className="w-16 h-16 bg-accent-blue/10 rounded-full flex items-center justify-center mb-3 border border-accent-blue/20">
                 <span className="font-bold text-accent-blue text-xl">4</span>
               </div>
-              <h4 className="font-semibold text-foreground">Labeling</h4>
+              <h4 className="font-semibold text-foreground">{language === "fr" ? "Étiquetage" : "Labeling"}</h4>
             </div>
             
             {/* Background flow line */}
@@ -149,7 +152,7 @@ export default function KanbanSimulationPage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Workflow className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">flow-diagram.png</span>
-                <img src="/assets/projects/kanban/flow-diagram.png" alt="Flow Diagram" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/kanban/flow-diagram.png" alt={language === "fr" ? "Schéma de flux" : "Flow diagram"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Schéma de flux" : "Flow Diagram"}
@@ -159,7 +162,7 @@ export default function KanbanSimulationPage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <RefreshCw className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">kanban-trigger.png</span>
-                <img src="/assets/projects/kanban/kanban-trigger.png" alt="Kanban Trigger" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/kanban/kanban-trigger.png" alt={language === "fr" ? "Déclenchement Kanban" : "Kanban trigger"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Déclenchement Kanban" : "Kanban Triggering"}
@@ -188,7 +191,7 @@ export default function KanbanSimulationPage() {
               <ul className="list-disc pl-5 space-y-2 text-foreground-secondary mb-4">
                 <li>{language === "fr" ? "les temps de traitement" : "processing times"}</li>
                 <li>{language === "fr" ? "les seuils de stock" : "stock thresholds"}</li>
-                <li>{language === "fr" ? "la durée du shift" : "shift duration"}</li>
+                <li>{language === "fr" ? "la durée de l’équipe" : "shift duration"}</li>
                 <li>{language === "fr" ? "les paramètres de simulation" : "simulation parameters"}</li>
               </ul>
               <p className="text-sm text-foreground-secondary italic">
@@ -216,14 +219,14 @@ export default function KanbanSimulationPage() {
 
         {/* 8. Résultats et visualisation (Apports industriels) */}
         <AnimatedSection>
-          <SectionHeading title={language === "fr" ? "Résultats et Apports" : "Results & Insights"} />
+          <SectionHeading title={language === "fr" ? "Résultats et apports" : "Results and insights"} />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-cards border border-border rounded-xl overflow-hidden shadow-sm">
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <BarChart className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">stock-levels.png</span>
-                <img src="/assets/projects/kanban/stock-levels.png" alt="Stock Levels" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/kanban/stock-levels.png" alt={language === "fr" ? "Niveaux de stock" : "Stock levels"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Niveaux de stock (Matplotlib)" : "Stock Levels (Matplotlib)"}
@@ -233,7 +236,7 @@ export default function KanbanSimulationPage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Database className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">csv-output.png</span>
-                <img src="/assets/projects/kanban/csv-output.png" alt="CSV Output" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/kanban/csv-output.png" alt={language === "fr" ? "Export CSV" : "CSV output"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Export de données CSV" : "CSV Data Export"}
@@ -261,33 +264,33 @@ export default function KanbanSimulationPage() {
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-blue">
               <h4 className="font-heading font-semibold text-foreground mb-3">1. {language === "fr" ? "Gestion de production" : "Production Management"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Flux tiré, Kanban, encours, seuils de stock, réapprovisionnement.
+                {language === "fr" ? "Flux tiré, Kanban, encours, seuils de stock et réapprovisionnement." : "Pull flow, Kanban, work in progress, stock thresholds and replenishment."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-green">
               <h4 className="font-heading font-semibold text-foreground mb-3">2. {language === "fr" ? "Simulation" : "Simulation"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Modélisation d’une ligne, logique dynamique, scénarios, évolution dans le temps.
+                {language === "fr" ? "Modélisation d’une ligne, logique dynamique, scénarios et évolution dans le temps." : "Production-line modeling, dynamic logic, scenarios and change over time."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-yellow">
-              <h4 className="font-heading font-semibold text-foreground mb-3">3. Data & visualisation</h4>
+              <h4 className="font-heading font-semibold text-foreground mb-3">3. {language === "fr" ? "Données et visualisation" : "Data and visualization"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Matplotlib, CSV, suivi des niveaux de stock, analyse des résultats.
+                {language === "fr" ? "Matplotlib, CSV, suivi des niveaux de stock et analyse des résultats." : "Matplotlib, CSV, stock-level monitoring and result analysis."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-foreground">
               <h4 className="font-heading font-semibold text-foreground mb-3">4. {language === "fr" ? "Développement Python" : "Python Development"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Structuration du code, séparation main.py / simulation.py, paramètres configurables, export des résultats.
+                {language === "fr" ? "Structuration du code, séparation de main.py et simulation.py, paramètres configurables et export des résultats." : "Code organization, separation of main.py and simulation.py, configurable parameters and result export."}
               </p>
             </div>
           </div>
           
           <div className="mt-12 text-center text-lg text-foreground-secondary max-w-3xl mx-auto italic">
-            "{language === "fr" 
+            &ldquo;{language === "fr"
               ? "Ce projet montre ma capacité à relier les méthodes de gestion de production à un outil numérique simple, afin de modéliser un flux, tester des paramètres et visualiser l’impact des décisions de stock sur la stabilité d’une ligne."
-              : "This project demonstrates my ability to connect production management methods with a simple digital tool, in order to model a flow, test parameters, and visualize the impact of stock decisions on line stability."}"
+              : "This project demonstrates my ability to connect production management methods with a simple digital tool, in order to model a flow, test parameters, and visualize the impact of stock decisions on line stability."}&rdquo;
           </div>
           
           <div className="mt-12 text-center">
@@ -298,7 +301,7 @@ export default function KanbanSimulationPage() {
               className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-md hover:bg-opacity-90 transition-colors shadow-md font-medium"
             >
               <GithubIcon size={20} className="mr-2" />
-              {language === "fr" ? "Voir le code sur GitHub" : "View code on GitHub"}
+              {t.projects.githubCode}
             </a>
           </div>
         </AnimatedSection>

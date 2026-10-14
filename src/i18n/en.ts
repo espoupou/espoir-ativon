@@ -15,7 +15,7 @@ export const en = {
     tags: "Continuous Improvement · Industrial Data Analysis · Production Digitalization",
     description: "I combine industrial engineering and software development to analyze production systems, use shop-floor data, automate performance monitoring and support continuous improvement projects in manufacturing environments.",
     availabilityTitle: "Current availability:",
-    availabilityText: "Looking for a 2–4 month internship between May and September 2026.\nAlso open to a one-year apprenticeship / professionalization contract starting in September 2026.",
+    availabilityText: "I am looking for an internship starting in January 2027.",
     targetFieldsTitle: "Target fields:",
     targetFieldsText: "Production, process engineering, industrialization, quality, continuous improvement, industrial data and Industry 4.0.",
     ctaProjects: "View projects",
@@ -82,7 +82,7 @@ export const en = {
   },
   currentSearch: {
     title: "Current search",
-    description1: "I am looking for a 2–4 month internship between May and September 2026 in:",
+    description1: "I am looking for an internship starting in January 2027 in the following fields:",
     list: [
       "continuous improvement;",
       "production / process engineering;",
@@ -92,18 +92,32 @@ export const en = {
       "industrial data analysis;",
       "supply chain / industrial flows."
     ],
-    description2: "I am also open to a one-year apprenticeship or professionalization contract starting in September 2026, with an approximate rhythm of one month in company / one month in training."
+    description2: "I want to join an industrial team where I can contribute to practical projects, learn from shop-floor experience and apply my combined background in industrial engineering and software development."
   },
   projects: {
     title: "Projects",
+    subtitle: "Explore my work at the intersection of industrial engineering and software development.",
     industrialTitle: "Industrial & Continuous Improvement Projects",
     dataTitle: "Data, Scientific & Analysis Tools Projects",
     softwareTitle: "Software Projects",
-    viewCaseStudy: "View case study"
+    viewCaseStudy: "View case study",
+    viewAll: "View all projects",
+    back: "Back to projects",
+    githubRepository: "View GitHub repository",
+    githubCode: "View code on GitHub",
+    overview: "Project overview",
+    problem: "Problem:",
+    role: "Role:",
+    contribution: "Contribution:"
   },
   experiences: {
     title: "Experience",
-    viewDetails: "View details"
+    subtitle: "My professional journey at the intersection of industry and digital technology.",
+    viewDetails: "View details",
+    viewAll: "View all",
+    back: "Back to experience",
+    missionsContributions: "Responsibilities & contributions",
+    contribution: "Contribution:"
   },
   skills: {
     title: "Skills",
@@ -175,14 +189,26 @@ export const en = {
   },
   contact: {
     title: "Contact me",
-    description: "I am open to internship and apprenticeship opportunities, as well as discussions around continuous improvement, production, quality, industrial data and digitalization projects.",
+    description: "I am looking for an internship starting in January 2027 and remain available to discuss continuous improvement, production, quality, industrial data and digitalization projects.",
     location: "Location: France, Hauts-de-France",
     phoneLabel: "Phone & WhatsApp:",
-    availability: "Availability: 2–4 month internship between May and September 2026; apprenticeship possible from September 2026.",
+    availability: "Availability: internship starting in January 2027.",
     sendEmail: "Send email"
   },
   footer: {
     tagline: "Industrial Engineering · Data · Industrial Digitalization",
+    navigation: "Navigation",
+    social: "Social",
+    backToTop: "Back to top",
     rights: "All rights reserved."
+  },
+  states: {
+    notFoundTitle: "Page not found",
+    notFoundDescription: "The page you are looking for does not exist or has been moved.",
+    returnHome: "Return home",
+    errorTitle: "Something went wrong",
+    errorDescription: "An unexpected error occurred while loading this page.",
+    retry: "Try again",
+    loading: "Loading…"
   }
 };

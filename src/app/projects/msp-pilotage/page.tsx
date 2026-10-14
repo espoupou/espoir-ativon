@@ -1,6 +1,8 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useTranslation } from "@/i18n";
+import Image from "next/image";
 import { projects } from "@/data/projects";
 import DetailHero from "@/components/DetailHero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,6 +13,7 @@ import { Activity, Database, LineChart, Settings, ShieldAlert, Wrench } from "lu
 
 export default function MspPilotagePage() {
   const { language } = useLanguage();
+  const t = useTranslation(language);
   const project = projects.find((p) => p.id === "msp");
 
   if (!project) return null;
@@ -19,7 +22,7 @@ export default function MspPilotagePage() {
   const simulationSteps = [
     { 
       title: language === "fr" ? "Entrée utilisateur" : "User Input", 
-      description: language === "fr" ? "L’utilisateur saisit la valeur cible initiale du process et l’intervalle de tolérance." : "The user enters the initial target value of the process and the tolerance interval." 
+      description: language === "fr" ? "L’utilisateur saisit la valeur cible initiale du procédé et l’intervalle de tolérance." : "The user enters the initial target value of the process and the tolerance interval."
     },
     { 
       title: language === "fr" ? "Initialisation" : "Initialization", 
@@ -31,11 +34,11 @@ export default function MspPilotagePage() {
     },
     { 
       title: language === "fr" ? "Boucle de simulation" : "Simulation Loop", 
-      description: language === "fr" ? "À chaque cycle, le process évolue, l’usure est prise en compte, de nouvelles données sont générées et les indicateurs qualité sont recalculés." : "At each cycle, the process evolves, wear is taken into account, new data is generated, and quality indicators are recalculated." 
+      description: language === "fr" ? "À chaque cycle, le procédé évolue, l’usure est prise en compte, de nouvelles données sont générées et les indicateurs qualité sont recalculés." : "At each cycle, the process evolves, wear is taken into account, new data is generated, and quality indicators are recalculated."
     },
     { 
       title: language === "fr" ? "Capabilité" : "Capability", 
-      description: language === "fr" ? "Les valeurs Cp et Cpk sont calculées pour évaluer la capacité du process à rester dans les tolérances." : "Cp and Cpk values are calculated to evaluate the process's ability to stay within tolerances." 
+      description: language === "fr" ? "Les valeurs Cp et Cpk sont calculées pour évaluer la capacité du procédé à rester dans les tolérances." : "Cp and Cpk values are calculated to evaluate the process's ability to stay within tolerances."
     },
     { 
       title: language === "fr" ? "Décision" : "Decision", 
@@ -56,7 +59,7 @@ export default function MspPilotagePage() {
         tags={content.tools}
         summary={content.summary[language]}
         backLink="/projects"
-        backLabel={language === "fr" ? "Retour aux projets" : "Back to projects"}
+        backLabel={t.projects.back}
         buttons={
           project.github && (
             <a
@@ -66,7 +69,7 @@ export default function MspPilotagePage() {
               className="inline-flex items-center px-5 py-2.5 bg-background border border-border rounded-md text-foreground hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors shadow-sm font-medium"
             >
               <GithubIcon size={18} className="mr-2" />
-              {language === "fr" ? "Voir le dépôt GitHub" : "View GitHub Repository"}
+              {t.projects.githubRepository}
             </a>
           )
         }
@@ -76,11 +79,11 @@ export default function MspPilotagePage() {
         
         {/* 2. Contexte & Problématique */}
         <AnimatedSection>
-          <SectionHeading title={language === "fr" ? "Contexte & Problématique" : "Context & Problematic"} />
+          <SectionHeading title={language === "fr" ? "Contexte et problématique" : "Context and challenge"} />
           <div className="prose dark:prose-invert max-w-none text-foreground-secondary text-lg leading-relaxed mb-8">
             <p>
               {language === "fr"
-                ? "Dans un environnement industriel, un process peut sembler stable au départ mais se dégrader progressivement à cause de l’usure, d’un mauvais réglage, d’une variation matière ou d’une dérive machine. La maîtrise statistique des procédés permet de détecter ces dérives avant qu’elles ne provoquent une non-qualité importante."
+                ? "Dans un environnement industriel, un procédé peut sembler stable au départ mais se dégrader progressivement à cause de l’usure, d’un mauvais réglage, d’une variation matière ou d’une dérive machine. La maîtrise statistique des procédés permet de détecter ces dérives avant qu’elles ne provoquent une non-qualité importante."
                 : "In an industrial environment, a process may seem stable initially but gradually degrade due to wear, poor adjustment, material variation, or machine drift. Statistical process control allows detecting these drifts before they cause significant non-quality."}
             </p>
           </div>
@@ -91,7 +94,7 @@ export default function MspPilotagePage() {
             </h3>
             <p className="text-foreground-secondary text-lg leading-relaxed">
               {language === "fr"
-                ? "Comment suivre la stabilité d’un process, détecter une dérive, mesurer la capabilité et décider d’une action corrective ou de maintenance à partir de données simulées ?"
+                ? "Comment suivre la stabilité d’un procédé, détecter une dérive, mesurer la capabilité et décider d’une action corrective ou de maintenance à partir de données simulées ?"
                 : "How to monitor process stability, detect a drift, measure capability, and decide on a corrective or maintenance action based on simulated data?"}
             </p>
           </div>
@@ -108,7 +111,7 @@ export default function MspPilotagePage() {
               language === "fr" ? "Suivre les indicateurs Cp et Cpk." : "Monitor Cp and Cpk indicators.",
               language === "fr" ? "Simuler l’effet progressif de l’usure." : "Simulate the progressive effect of wear.",
               language === "fr" ? "Permettre des actions utilisateur (continuer, ajuster, arrêter, maintenance)." : "Allow user actions (continue, adjust, stop, maintenance).",
-              language === "fr" ? "Montrer le lien entre qualité, process et maintenance." : "Show the link between quality, process, and maintenance."
+              language === "fr" ? "Montrer le lien entre qualité, procédé et maintenance." : "Show the link between quality, process, and maintenance."
             ].map((obj, i) => (
               <div key={i} className="flex items-start bg-cards border border-border p-4 rounded-xl">
                 <span className="text-accent-blue mr-3 mt-1">•</span>
@@ -128,7 +131,7 @@ export default function MspPilotagePage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <LineChart className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">control-chart.png</span>
-                <img src="/assets/projects/msp/control-chart.png" alt="Control Chart" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/msp/control-chart.png" alt={language === "fr" ? "Carte de contrôle" : "Control chart"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Carte de contrôle (X-bar)" : "Control Chart (X-bar)"}
@@ -138,7 +141,7 @@ export default function MspPilotagePage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Activity className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">cp-cpk.png</span>
-                <img src="/assets/projects/msp/cp-cpk.png" alt="Cp / Cpk Indicators" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/msp/cp-cpk.png" alt={language === "fr" ? "Indicateurs Cp et Cpk" : "Cp and Cpk indicators"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Indicateurs de capabilité (Cp/Cpk)" : "Capability Indicators (Cp/Cpk)"}
@@ -148,7 +151,7 @@ export default function MspPilotagePage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Settings className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">wear-simulation.png</span>
-                <img src="/assets/projects/msp/wear-simulation.png" alt="Wear Simulation" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/msp/wear-simulation.png" alt={language === "fr" ? "Simulation de l’usure" : "Wear simulation"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Simulation de la dérive (Usure)" : "Drift Simulation (Wear)"}
@@ -158,7 +161,7 @@ export default function MspPilotagePage() {
               <div className="h-48 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center text-foreground-secondary relative">
                 <Wrench className="w-8 h-8 mb-2 text-foreground-secondary/50" />
                 <span className="text-xs">maintenance-decision.png</span>
-                <img src="/assets/projects/msp/maintenance-decision.png" alt="Maintenance Decision" className="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
+                <Image fill sizes="(min-width: 768px) 400px, 100vw" src="/assets/projects/msp/maintenance-decision.png" alt={language === "fr" ? "Décision de maintenance" : "Maintenance decision"} className="object-cover opacity-0 hover:opacity-100 transition-opacity" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="p-4 text-center text-sm text-foreground-secondary">
                 {language === "fr" ? "Décision de maintenance" : "Maintenance Decision"}
@@ -184,15 +187,15 @@ export default function MspPilotagePage() {
             
             <div className="bg-background-secondary border border-border p-6 rounded-xl">
               <h4 className="font-heading font-semibold text-foreground mb-4">
-                {language === "fr" ? "Résultats et Apports :" : "Results & Insights:"}
+                {language === "fr" ? "Résultats et apports :" : "Results and insights:"}
               </h4>
               <ul className="list-disc pl-5 space-y-2 text-foreground-secondary text-sm">
-                <li>{language === "fr" ? "visualisation du comportement d’un process" : "visualization of process behavior"}</li>
+                <li>{language === "fr" ? "visualisation du comportement d’un procédé" : "visualization of process behavior"}</li>
                 <li>{language === "fr" ? "suivi statistique avec cartes X-bar et R" : "statistical monitoring with X-bar and R charts"}</li>
                 <li>{language === "fr" ? "calcul de Cp et Cpk" : "Cp and Cpk calculation"}</li>
                 <li>{language === "fr" ? "simulation de l’usure" : "wear simulation"}</li>
                 <li>{language === "fr" ? "prise de décision maintenance / ajustement" : "maintenance / adjustment decision-making"}</li>
-                <li>{language === "fr" ? "meilleure compréhension du lien entre dérive process, qualité et maintenance" : "better understanding of the link between process drift, quality, and maintenance"}</li>
+                <li>{language === "fr" ? "meilleure compréhension du lien entre dérive du procédé, qualité et maintenance" : "better understanding of the link between process drift, quality, and maintenance"}</li>
               </ul>
             </div>
           </div>
@@ -211,33 +214,41 @@ export default function MspPilotagePage() {
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-blue">
               <h4 className="font-heading font-semibold text-foreground mb-3">1. {language === "fr" ? "Qualité & MSP" : "Quality & SPC"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Cartes de contrôle, limites de contrôle, dispersion, capabilité process, Cp / Cpk.
+                {language === "fr"
+                  ? "Cartes de contrôle, limites de contrôle, dispersion, capabilité du procédé, Cp et Cpk."
+                  : "Control charts, control limits, dispersion, process capability, Cp and Cpk."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-green">
               <h4 className="font-heading font-semibold text-foreground mb-3">2. {language === "fr" ? "Process industriel" : "Industrial Process"}</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Dérive, tolérances, réglage cible, comportement dans le temps.
+                {language === "fr"
+                  ? "Dérive, tolérances, réglage cible et comportement dans le temps."
+                  : "Drift, tolerances, target setting, and behavior over time."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-accent-yellow">
               <h4 className="font-heading font-semibold text-foreground mb-3">3. Maintenance</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Effet de l’usure, seuils de décision, maintenance corrective simulée.
+                {language === "fr"
+                  ? "Effet de l’usure, seuils de décision et maintenance corrective simulée."
+                  : "Wear effects, decision thresholds, and simulated corrective maintenance."}
               </p>
             </div>
             <div className="bg-cards border border-border p-5 rounded-xl border-t-4 border-t-foreground">
               <h4 className="font-heading font-semibold text-foreground mb-3">4. MATLAB</h4>
               <p className="text-sm text-foreground-secondary leading-relaxed">
-                Simulation, interaction utilisateur, visualisation, logique conditionnelle.
+                {language === "fr"
+                  ? "Simulation, interaction utilisateur, visualisation et logique conditionnelle."
+                  : "Simulation, user interaction, visualization, and conditional logic."}
               </p>
             </div>
           </div>
           
           <div className="mt-12 text-center text-lg text-foreground-secondary max-w-3xl mx-auto italic">
-            "{language === "fr" 
-              ? "Ce projet montre ma capacité à relier qualité, statistiques, comportement process et logique de maintenance dans une simulation simple, utile pour comprendre les principes de la maîtrise statistique des procédés."
-              : "This project demonstrates my ability to connect quality, statistics, process behavior, and maintenance logic in a simple simulation, useful for understanding the principles of statistical process control."}"
+            &ldquo;{language === "fr"
+              ? "Ce projet montre ma capacité à relier qualité, statistiques, comportement du procédé et logique de maintenance dans une simulation simple, utile pour comprendre les principes de la maîtrise statistique des procédés."
+              : "This project demonstrates my ability to connect quality, statistics, process behavior, and maintenance logic in a simple simulation, useful for understanding the principles of statistical process control."}&rdquo;
           </div>
           
           <div className="mt-12 text-center">
@@ -248,7 +259,7 @@ export default function MspPilotagePage() {
               className="inline-flex items-center px-6 py-3 bg-foreground text-background rounded-md hover:bg-opacity-90 transition-colors shadow-md font-medium"
             >
               <GithubIcon size={20} className="mr-2" />
-              {language === "fr" ? "Voir le code sur GitHub" : "View code on GitHub"}
+              {t.projects.githubCode}
             </a>
           </div>
         </AnimatedSection>

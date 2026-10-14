@@ -30,13 +30,13 @@ export default function SkillGrid() {
       {t.skills.categories.map((category, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           className="bg-cards border border-border p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
         >
-          <div className="mb-4 bg-background-secondary w-12 h-12 rounded-lg flex items-center justify-center border border-border">
+          <div aria-hidden="true" className="mb-4 bg-background-secondary w-12 h-12 rounded-lg flex items-center justify-center border border-border">
             {icons[index % icons.length]}
           </div>
           <h3 className="font-heading font-semibold text-lg text-foreground mb-3">

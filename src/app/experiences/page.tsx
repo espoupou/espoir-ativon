@@ -15,7 +15,8 @@ export default function ExperiencesPage() {
     <div className="pt-32 pb-24 max-w-[800px] mx-auto px-5 md:px-8">
       <SectionHeading 
         title={t.experiences.title} 
-        subtitle="Mon parcours professionnel à la croisée de l'industrie et du numérique."
+        subtitle={t.experiences.subtitle}
+        as="h1"
       />
 
       <div className="mt-16 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">

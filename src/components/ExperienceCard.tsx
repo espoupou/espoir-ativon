@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, MapPin, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Experience } from "@/data/experiences";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useTranslation } from "@/i18n";
@@ -18,9 +18,9 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   const content = experience.content;
   
   return (
-    <motion.div
+    <motion.article
       whileHover={{ y: -3 }}
-      className="bg-cards border border-border rounded-xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden group"
+      className="h-full flex flex-col bg-cards border border-border rounded-xl p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group"
     >
       <div className="absolute top-0 left-0 w-1 h-full bg-accent-blue opacity-50 group-hover:opacity-100 transition-opacity"></div>
       
@@ -34,8 +34,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           </p>
         </div>
         <div className="flex items-center text-foreground-secondary text-sm font-mono bg-gray-50 dark:bg-gray-800 px-3 py-1 rounded-md border border-border self-start">
-          <Calendar size={14} className="mr-2" />
-          {content.period}
+          <Calendar size={14} className="mr-2" aria-hidden="true" />
+          <time>{content.period}</time>
         </div>
       </div>
       
@@ -46,7 +46,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       <ul className="mb-6 space-y-2">
         {content.missions.map((mission, idx) => (
           <li key={idx} className="flex items-start">
-            <span className="text-accent-green mr-2 mt-1">•</span>
+            <span className="text-accent-green mr-2 mt-1" aria-hidden="true">•</span>
             <span className="text-sm text-foreground-secondary">{mission[language]}</span>
           </li>
         ))}
@@ -66,12 +66,13 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         
         <Link 
           href={`/experiences/${experience.slug}`}
-          className="inline-flex items-center text-accent-blue hover:text-blue-700 font-medium text-sm transition-colors group-hover:underline"
+          className="inline-flex items-center text-accent-blue font-medium text-sm underline-offset-4 hover:underline focus-visible:underline"
         >
           {t.experiences.viewDetails}
-          <ArrowRight size={16} className="ml-1" />
+          <span className="sr-only"> — {content.role[language]}, {content.organization}</span>
+          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
         </Link>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

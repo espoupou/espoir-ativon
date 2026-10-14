@@ -189,7 +189,7 @@ export default function Home() {
         <div className="flex justify-between items-end mb-12">
           <SectionHeading title={t.projects.industrialTitle} />
           <Link href="/projects" className="hidden md:inline-flex items-center text-accent-green font-medium hover:underline mb-12">
-            Voir tous les projets <ArrowRight size={16} className="ml-1" />
+            {t.projects.viewAll} <ArrowRight size={16} className="ml-1" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,7 +201,7 @@ export default function Home() {
         </div>
         <div className="mt-10 text-center md:hidden">
           <Link href="/projects" className="inline-flex items-center text-accent-green font-medium hover:underline px-6 py-3 border border-accent-green rounded-md">
-            Voir tous les projets <ArrowRight size={16} className="ml-2" />
+            {t.projects.viewAll} <ArrowRight size={16} className="ml-2" />
           </Link>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="flex justify-between items-end mb-12">
             <SectionHeading title={t.experiences.title} />
             <Link href="/experiences" className="hidden md:inline-flex items-center text-accent-blue font-medium hover:underline mb-12">
-              Voir tout <ArrowRight size={16} className="ml-1" />
+              {t.experiences.viewAll} <ArrowRight size={16} className="ml-1" />
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -244,7 +244,7 @@ export default function Home() {
             )}
 
             <div className="relative border-l-2 border-border/50 ml-3 md:ml-6 space-y-12">
-              {t.education.items.map((item: any, idx: number) => (
+              {t.education.items.map((item, idx) => (
                 <AnimatedSection key={idx} delay={idx * 0.1} className="relative pl-6 md:pl-10">
                   {/* Timeline Dot */}
                   <div className="absolute w-4 h-4 bg-accent-yellow rounded-full -left-[9px] top-1.5 ring-4 ring-background-secondary"></div>
@@ -265,7 +265,7 @@ export default function Home() {
                     </p>
                     {item.tags && (
                       <div className="flex flex-wrap gap-2">
-                        {item.tags.map((tag: string, tagIdx: number) => (
+                        {item.tags.map((tag, tagIdx) => (
                           <span key={tagIdx} className="px-3 py-1 bg-background border border-border rounded-md text-xs font-medium text-foreground-secondary shadow-sm">
                             {tag}
                           </span>

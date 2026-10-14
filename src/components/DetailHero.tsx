@@ -19,12 +19,12 @@ export default function DetailHero({ title, subtitle, tags, summary, backLink, b
     <section className="pt-32 pb-16 border-b border-border bg-background-secondary">
       <div className="max-w-[800px] mx-auto px-5 md:px-8">
         <Link href={backLink} className="inline-flex items-center text-foreground-secondary hover:text-foreground mb-8 text-sm font-medium transition-colors">
-          <ArrowLeft size={16} className="mr-2" />
+          <ArrowLeft size={16} className="mr-2" aria-hidden="true" />
           {backLabel}
         </Link>
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >

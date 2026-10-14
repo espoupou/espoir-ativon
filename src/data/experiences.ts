@@ -50,7 +50,7 @@ export const experiences: Experience[] = [
           en: "Support in understanding the traceability flow after palletization.",
         }
       ],
-      tools: ["Production", "Excel", "Python", "EVOCON", "Qualité"],
+      tools: ["Production", "Excel", "Python", "EVOCON", "QA / QC"],
       contribution: {
         fr: "Mise en évidence de corrélations et optimisation de l'organisation des contrôles.",
         en: "Highlighting correlations and optimizing the organization of controls.",
@@ -86,7 +86,7 @@ export const experiences: Experience[] = [
           en: "Implementation of a secure, read-only document manager.",
         }
       ],
-      tools: ["ISO 21001", "SIPOC", "Gap Analysis", "Indicateurs", "Documentation"],
+      tools: ["ISO 21001", "SIPOC", "Gap Analysis", "KPI", "Documentation"],
       contribution: {
         fr: "A contribué à rendre le système qualité plus lisible et mesurable.",
         en: "Contributed to making the quality system more readable and measurable.",
@@ -150,7 +150,7 @@ export const experiences: Experience[] = [
           en: "Development of application features and data management.",
         }
       ],
-      tools: ["Web", "Mobile", "Databases", "UI/UX"],
+      tools: ["Web", "Mobile", "SQL / DB", "UI/UX"],
       contribution: {
         fr: "Base solide pour relier aujourd'hui informatique et projets industriels.",
         en: "Solid foundation for linking computer science and industrial projects today.",

@@ -19,7 +19,8 @@ export default function ProjectsPage() {
     <div className="pt-32 pb-24 max-w-[1200px] mx-auto px-5 md:px-8">
       <SectionHeading 
         title={t.projects.title} 
-        subtitle="Découvrez mes travaux à l'interface entre l'ingénierie industrielle et le développement logiciel."
+        subtitle={t.projects.subtitle}
+        as="h1"
       />
 
       <div className="mt-16 mb-20">

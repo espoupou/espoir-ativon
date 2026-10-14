@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col space-y-4">
-            <h4 className="font-heading font-semibold text-foreground">Navigation</h4>
+            <h4 className="font-heading font-semibold text-foreground">{t.footer.navigation}</h4>
             <ul className="flex flex-col space-y-2 text-sm text-foreground-secondary">
               <li><Link href="/" className="hover:text-accent-green transition-colors">{t.nav.home}</Link></li>
               <li><Link href="/projects" className="hover:text-accent-green transition-colors">{t.nav.projects}</Link></li>
@@ -34,14 +34,14 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col space-y-4">
-            <h4 className="font-heading font-semibold text-foreground">Social</h4>
+            <h4 className="font-heading font-semibold text-foreground">{t.footer.social}</h4>
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/kokou-espoir-ativon-3404571a6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground-secondary hover:text-[#0A66C2] transition-colors"
-                aria-label="LinkedIn"
+                className="size-11 inline-flex items-center justify-center rounded-md border border-border text-foreground-secondary hover:text-accent-green transition-colors"
+                aria-label={language === "fr" ? "Profil LinkedIn (nouvel onglet)" : "LinkedIn profile (new tab)"}
               >
                 <LinkedinIcon size={20} />
               </a>
@@ -49,15 +49,15 @@ export default function Footer() {
                 href="https://github.com/espoupou"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground-secondary hover:text-foreground transition-colors"
-                aria-label="GitHub"
+                className="size-11 inline-flex items-center justify-center rounded-md border border-border text-foreground-secondary hover:text-foreground transition-colors"
+                aria-label={language === "fr" ? "Profil GitHub (nouvel onglet)" : "GitHub profile (new tab)"}
               >
                 <GithubIcon size={20} />
               </a>
               <a
                 href="mailto:espoirativon@gmail.com"
-                className="text-foreground-secondary hover:text-accent-green transition-colors"
-                aria-label="Email"
+                className="size-11 inline-flex items-center justify-center rounded-md border border-border text-foreground-secondary hover:text-accent-green transition-colors"
+                aria-label={language === "fr" ? "Envoyer un e-mail à Espoir" : "Email Espoir"}
               >
                 <Mail size={20} />
               </a>
@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center text-xs text-foreground-secondary">
           <p>© {currentYear} Kokou Espoir ATIVON. {t.footer.rights}</p>
           <div className="mt-4 md:mt-0 flex space-x-4">
-            <span className="font-mono text-[10px]">Built with Next.js & Tailwind</span>
+            <a href="#main-content" className="min-h-11 inline-flex items-center hover:text-accent-green transition-colors">{t.footer.backToTop} ↑</a>
           </div>
         </div>
       </div>

@@ -2,27 +2,33 @@
 
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const subscribe = () => () => {};
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const { resolvedTheme, setTheme } = useTheme();
+  const { language } = useLanguage();
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
+  const isDark = resolvedTheme === "dark";
+  const label = language === "fr"
+    ? (isDark ? "Activer le thème clair" : "Activer le thème sombre")
+    : (isDark ? "Switch to light theme" : "Switch to dark theme");
 
   if (!mounted) {
-    return <div className="w-9 h-9" />; // Placeholder to avoid layout shift
+    return <span className="block size-11" aria-hidden="true" />;
   }
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-green"
-      aria-label="Toggle theme"
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="size-11 inline-flex items-center justify-center rounded-md hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+      aria-label={label}
+      title={label}
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {isDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
     </button>
   );
 }

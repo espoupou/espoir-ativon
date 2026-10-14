@@ -12,7 +12,7 @@ interface MetricCardProps {
 export default function MetricCard({ title, value, description, delay = 0 }: MetricCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
@@ -20,9 +20,9 @@ export default function MetricCard({ title, value, description, delay = 0 }: Met
     >
       <div className="absolute top-0 right-0 w-24 h-24 bg-accent-green/5 rounded-full -mr-8 -mt-8 blur-xl group-hover:bg-accent-green/10 transition-colors"></div>
       
-      <h4 className="font-heading font-semibold text-lg text-foreground mb-1">{title}</h4>
+      <h3 className="font-heading font-semibold text-lg text-foreground mb-1">{title}</h3>
       
-      {value && (
+      {value !== undefined && (
         <div className="font-mono font-bold text-3xl text-accent-green mb-3">
           {value}
         </div>

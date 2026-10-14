@@ -5,16 +5,17 @@ interface SectionHeadingProps {
   subtitle?: string;
   children?: ReactNode;
   align?: "left" | "center";
+  as?: "h1" | "h2" | "h3";
 }
 
-export default function SectionHeading({ title, subtitle, children, align = "left" }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, children, align = "left", as: Heading = "h2" }: SectionHeadingProps) {
   return (
     <div className={`mb-12 ${align === "center" ? "text-center" : ""}`}>
-      <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+      <Heading className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4 tracking-tight">
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
-        <p className="text-lg text-foreground-secondary max-w-3xl font-medium">
+        <p className={`text-lg text-foreground-secondary max-w-3xl leading-relaxed ${align === "center" ? "mx-auto" : ""}`}>
           {subtitle}
         </p>
       )}
