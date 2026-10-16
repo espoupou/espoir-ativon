@@ -22,6 +22,41 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    id: "kerry",
+    slug: "kerry",
+    content: {
+      role: {
+        fr: "Excellence opérationnelle et amélioration continue",
+        en: "Operational Excellence & Continuous Improvement",
+      },
+      organization: "Kerry Savoury Ingredients France",
+      period: "15/06–11/09/2026 · Blendecques, France",
+      context: {
+        fr: "Stage d’ingénieur en production consacré à la standardisation du travail, aux audits LPA, à la résolution de problèmes et à l’analyse des changements de série.",
+        en: "Production engineering internship focused on standard work, LPA audits, problem-solving, and changeover analysis.",
+      },
+      missions: [
+        {
+          fr: "Observer les opérations terrain et structurer des standards de travail clairs.",
+          en: "Observe shop-floor operations and structure clear working standards.",
+        },
+        {
+          fr: "Déployer les audits LPA et former opérateurs, chefs d’équipe et managers.",
+          en: "Deploy LPA audits and train operators, team leaders, and managers.",
+        },
+        {
+          fr: "Analyser les changements de série avec une démarche SMED et suivre les actions d’amélioration.",
+          en: "Analyze changeovers using SMED and monitor improvement actions.",
+        },
+      ],
+      tools: ["Lean", "LPA", "SMED", "3C", "SAP", "MES", "Excel"],
+      contribution: {
+        fr: "Des standards plus accessibles, plus de 50 audits LPA réalisés et plus de 30 collaborateurs formés.",
+        en: "More accessible standards, 50+ LPA audits completed, and 30+ employees trained.",
+      },
+    },
+  },
+  {
     id: "super-cerame",
     slug: "super-cerame", // redirects to project page in UI
     image: "/assets/experiences/super-cerame/logo.png",
@@ -67,7 +102,7 @@ export const experiences: Experience[] = [
         en: "Quality Engineer Assistant",
       },
       organization: "Université Mohammed V de Rabat",
-      period: "2024",
+      period: "2025",
       context: {
         fr: "Assurance qualité interne universitaire, structuration de système documentaire et ISO 21001.",
         en: "Internal university quality assurance, documentation system structuring and ISO 21001.",
