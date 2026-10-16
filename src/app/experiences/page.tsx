@@ -12,7 +12,7 @@ export default function ExperiencesPage() {
   const t = useTranslation(language);
 
   return (
-    <div className="pt-32 pb-24 max-w-[800px] mx-auto px-5 md:px-8">
+    <div className="pt-32 pb-24 max-w-[1400px] mx-auto px-5 md:px-8">
       <SectionHeading 
         title={t.experiences.title} 
         subtitle={t.experiences.subtitle}
