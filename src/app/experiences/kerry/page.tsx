@@ -22,13 +22,13 @@ export default function KerryExperiencePage() {
         { value: "30+", title: "Collaborateurs formés", description: "Opérateurs, chefs d’équipe et trois managers concernés par le déploiement." },
         { value: "50+", title: "Audits LPA", description: "Audits de confirmation réalisés pour soutenir l’application des standards." },
         { value: ">95 %", title: "Participation", description: "Participation observée parmi les collaborateurs formés." },
-        { value: "4–7 min", title: "Potentiel SMED estimé", description: "Opportunité identifiée, soumise à validation opérationnelle — pas un gain déjà réalisé." },
+        { value: "4–7 min", title: "Potentiel SMED estimé", description: "Opportunité identifiée, soumise à validation opérationnelle - pas un gain déjà réalisé." },
       ]
     : [
         { value: "30+", title: "Employees trained", description: "Operators, team leaders, and three managers involved in the rollout." },
         { value: "50+", title: "LPA audits", description: "Confirmation audits completed to support consistent use of standards." },
         { value: ">95%", title: "Participation", description: "Participation observed among trained employees." },
-        { value: "4–7 min", title: "Estimated SMED potential", description: "An identified opportunity subject to operational validation—not a saving already achieved." },
+        { value: "4–7 min", title: "Estimated SMED potential", description: "An identified opportunity subject to operational validation-not a saving already achieved." },
       ];
 
   const cycle = language === "fr"
@@ -89,7 +89,7 @@ export default function KerryExperiencePage() {
     <div className="pb-24">
       <DetailHero
         title={content.role[language]}
-        subtitle={language === "fr" ? "Stage d’ingénieur en production — Kerry Savoury Ingredients France" : "Production Engineering Internship — Kerry Savoury Ingredients France"}
+        subtitle={language === "fr" ? "Stage d’ingénieur en production - Kerry Savoury Ingredients France" : "Production Engineering Internship - Kerry Savoury Ingredients France"}
         tags={content.tools}
         summary={content.context[language]}
         backLink="/experiences"

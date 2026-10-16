@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kokou Espoir ATIVON — Génie industriel & digitalisation",
+    default: "Kokou Espoir ATIVON - Génie industriel & digitalisation",
     template: "%s | Kokou Espoir ATIVON",
   },
   description: "Étudiant ingénieur en génie industriel avec un parcours en informatique, à la recherche d’un stage à partir de janvier 2027 en amélioration continue, production, qualité, données industrielles ou digitalisation.",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     alternateLocale: ["en_GB"],
     siteName: "Kokou Espoir ATIVON",
-    title: "Kokou Espoir ATIVON — Génie industriel & digitalisation",
+    title: "Kokou Espoir ATIVON - Génie industriel & digitalisation",
     description: "Projets, expériences et compétences en génie industriel, données et développement logiciel. Recherche d’un stage à partir de janvier 2027.",
     url: "/",
     images: [
@@ -77,13 +77,13 @@ export const metadata: Metadata = {
         url: SOCIAL_IMAGE_PATH,
         width: 1200,
         height: 630,
-        alt: "Kokou Espoir ATIVON — Génie industriel et digitalisation",
+        alt: "Kokou Espoir ATIVON - Génie industriel et digitalisation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kokou Espoir ATIVON — Génie industriel & digitalisation",
+    title: "Kokou Espoir ATIVON - Génie industriel & digitalisation",
     description: "Projets, expériences et compétences en génie industriel, données et développement logiciel.",
     images: [SOCIAL_IMAGE_PATH],
   },

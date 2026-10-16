@@ -153,31 +153,31 @@ export const fr = {
     intro: "Mon parcours combine une base solide en informatique et développement logiciel avec une formation actuelle en génie industriel, production, qualité et transformation numérique.",
     items: [
       {
-        degree: "Cycle ingénieur en Génie Industriel — EILCO - Co-diplomation avec l'ensam",
+        degree: "Cycle ingénieur en Génie Industriel - EILCO - Co-diplomation avec l'ensam",
         period: "En cours",
         description: "Parcours de co-diplomation avec les Arts et Métiers (ENSAM), orienté génie industriel, digitalisation, analyse des systèmes de production, qualité, chaîne logistique et amélioration continue. Le parcours met l’accent sur l’analyse des systèmes de production, la performance industrielle, les méthodes Lean, la gestion des flux et l’intégration des outils numériques dans l’industrie.",
         tags: ["Génie industriel", "Production", "Lean", "Qualité", "Chaîne logistique", "Digitalisation industrielle"]
       },
       {
-        degree: "Génie Industriel et Technologie Numérique — ENSAM",
+        degree: "Génie Industriel et Technologie Numérique - ENSAM",
         period: "En cours",
         description: "Formation d’ingénieur orientée systèmes industriels, production, amélioration continue, qualité, gestion de projet et transformation des organisations productives. Ce parcours renforce mon approche terrain et méthode autour de la performance industrielle. Elle correspond directement à mon positionnement hybride entre terrain industriel et développement logiciel.",
         tags: ["Systèmes industriels", "Industrie 4.0", "Données industrielles", "Supervision", "Automatisation", "Digitalisation"]
       },
       {
-        degree: "Spécialisation développement serveur — ALX Software Engineering",
+        degree: "Spécialisation développement serveur - ALX Software Engineering",
         period: "2023–2024",
         description: "Formation intensive en génie logiciel avec spécialisation en développement serveur. Renforcement des bases en architecture logicielle, développement serveur, API, bases de données, logique système, collaboration Git/GitHub et bonnes pratiques de développement.",
         tags: ["Développement serveur", "API", "Bases de données", "Git/GitHub", "Génie logiciel"]
       },
       {
-        degree: "DEUG en Sciences Mathématiques et Informatiques — FS Tétouan",
+        degree: "DEUG en Sciences Mathématiques et Informatiques - FS Tétouan",
         period: "2021–2023",
         description: "Formation universitaire couvrant les bases de la programmation, de l’algorithmique, des structures de données, des bases de données, des systèmes informatiques et du développement logiciel.",
         tags: ["Informatique", "Algorithmique", "Programmation", "Bases de données", "Systèmes"]
       },
       {
-        degree: "Génie Logiciel — École Polytechnique, Centre Informatique et de Calcul, Université de Lomé",
+        degree: "Génie Logiciel - École Polytechnique, Centre Informatique et de Calcul, Université de Lomé",
         period: "2019–2021",
         description: "Première formation supérieure orientée génie logiciel, avec apprentissage des fondamentaux du développement logiciel, de la logique de programmation, des technologies web et des bases de l’informatique appliquée.",
         tags: ["Génie logiciel", "Programmation", "Web", "Informatique appliquée"]

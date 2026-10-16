@@ -69,7 +69,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           className="inline-flex items-center text-accent-blue font-medium text-sm underline-offset-4 hover:underline focus-visible:underline"
         >
           {t.experiences.viewDetails}
-          <span className="sr-only"> — {content.role[language]}, {content.organization}</span>
+          <span className="sr-only"> - {content.role[language]}, {content.organization}</span>
           <ArrowRight size={16} className="ml-1" aria-hidden="true" />
         </Link>
       </div>

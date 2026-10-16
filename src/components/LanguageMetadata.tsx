@@ -64,7 +64,7 @@ export default function LanguageMetadata() {
       description = t.states.notFoundDescription;
     }
 
-    const title = pathname === "/" ? `${siteName} — ${pageTitle}` : `${pageTitle} | ${siteName}`;
+    const title = pathname === "/" ? `${siteName} - ${pageTitle}` : `${pageTitle} | ${siteName}`;
     document.title = title;
     updateMeta('meta[name="description"]', "name", "description", description);
     updateMeta('meta[property="og:title"]', "property", "og:title", title);

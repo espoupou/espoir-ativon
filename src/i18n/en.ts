@@ -153,31 +153,31 @@ export const en = {
     intro: "My background combines strong foundations in computer science and software development with my current training in industrial engineering, production, quality and digital transformation.",
     items: [
       {
-        degree: "Engineering Degree in Industrial Engineering — EILCO - Co-degree with ENSAM",
+        degree: "Engineering Degree in Industrial Engineering - EILCO - Co-degree with ENSAM",
         period: "Ongoing",
         description: "Co-degree pathway with Arts et Métiers (ENSAM), focusing on industrial engineering, digitalization, production systems analysis, quality, supply chain and continuous improvement. The program emphasizes production analysis, industrial performance, Lean methods, flow management and the integration of digital tools in manufacturing environments.",
         tags: ["Industrial Engineering", "Production", "Lean", "Quality", "Supply Chain", "Industrial Digitalization"]
       },
       {
-        degree: "Industrial Engineering and Digital Technology — ENSAM",
+        degree: "Industrial Engineering and Digital Technology - ENSAM",
         period: "Ongoing",
         description: "Engineering program focused on industrial systems, production, continuous improvement, quality, project management and transformation of production organizations. This pathway strengthens my field and methodological approach to industrial performance. It directly supports my hybrid positioning between industrial operations and software development.",
         tags: ["Industrial Systems", "Industry 4.0", "Industrial Data", "Supervision", "Automation", "Digitalization"]
       },
       {
-        degree: "Backend Specialization — ALX Software Engineering",
+        degree: "Backend Specialization - ALX Software Engineering",
         period: "2023–2024",
         description: "Intensive software engineering program with a backend specialization. Strengthened foundations in software architecture, server-side development, APIs, databases, system logic, Git/GitHub collaboration and development best practices.",
         tags: ["Backend", "APIs", "Databases", "Git/GitHub", "Software Engineering"]
       },
       {
-        degree: "DEUG in Mathematical and Computer Sciences — FS Tétouan",
+        degree: "DEUG in Mathematical and Computer Sciences - FS Tétouan",
         period: "2021–2023",
         description: "University program covering programming, algorithms, data structures, databases, computer systems and software development fundamentals.",
         tags: ["Computer Science", "Algorithms", "Programming", "Databases", "Systems"]
       },
       {
-        degree: "Software Engineering — Polytechnic School, Computing and Information Center, University of Lomé",
+        degree: "Software Engineering - Polytechnic School, Computing and Information Center, University of Lomé",
         period: "2019–2021",
         description: "Initial higher education program focused on software engineering, with foundations in software development, programming logic, web technologies and applied computer science.",
         tags: ["Software Engineering", "Programming", "Web", "Applied Computer Science"]

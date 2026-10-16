@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const socialCardAlt =
-  "Kokou Espoir ATIVON — Génie industriel, données et digitalisation";
+  "Kokou Espoir ATIVON - Génie industriel, données et digitalisation";
 export const socialCardSize = { width: 1200, height: 630 };
 export const socialCardContentType = "image/png";
 

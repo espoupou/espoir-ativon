@@ -82,7 +82,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 flex items-center justify-between">
-        <Link href="/" onClick={() => setMobileMenuOpen(false)} aria-label={language === "fr" ? "Kokou Espoir ATIVON — Accueil" : "Kokou Espoir ATIVON — Home"} className="font-heading font-bold text-xl tracking-tight text-foreground hover:text-accent-green transition-colors shrink-0">
+        <Link href="/" onClick={() => setMobileMenuOpen(false)} aria-label={language === "fr" ? "Kokou Espoir ATIVON - Accueil" : "Kokou Espoir ATIVON - Home"} className="font-heading font-bold text-xl tracking-tight text-foreground hover:text-accent-green transition-colors shrink-0">
           K. Espoir
         </Link>
 

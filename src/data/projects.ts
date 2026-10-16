@@ -30,7 +30,7 @@ export const projects: Project[] = [
     id: "super-cerame", slug: "super-cerame", type: "industrial",
     github: "https://github.com/espoupou/super_cerame",
     content: {
-      title: copy("Super Cérame — Pilotage de production", "Super Cérame — Production monitoring"),
+      title: copy("Super Cérame - Pilotage de production", "Super Cérame - Production monitoring"),
       subtitle: copy("Du contrôle de la barbotine à la traçabilité des produits finis.", "From slip monitoring to finished product traceability."),
       summary: copy("Mesures terrain et analyse Python pour mieux organiser les contrôles de densité, viscosité et résidu avant atomisation.", "Shop-floor measurements and Python analysis to improve density, viscosity and residue checks before atomization."),
       problem: copy("Maîtriser les variations de la barbotine avant atomisation, tout en limitant les contrôles répétitifs.", "Control slip variations before atomization while reducing repetitive checks."),
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     id: "kanban", slug: "kanban-simulation", type: "industrial",
     github: "https://github.com/espoupou/Kanban-Simulation-with-Stock-Sizing",
     content: {
-      title: copy("Kanban — Simulation des flux", "Kanban — Production flow simulation"),
+      title: copy("Kanban - Simulation des flux", "Kanban - Production flow simulation"),
       subtitle: copy("Dimensionner les stocks et comprendre le déclenchement du réapprovisionnement.", "Size inventory and understand replenishment triggers."),
       summary: copy("Simulation Python d’une ligne à quatre postes : stocks intermédiaires, seuils Kanban et réapprovisionnement en flux tiré.", "Python simulation of a four-station line: intermediate inventory, Kanban thresholds and pull-based replenishment."),
       problem: copy("Trouver un équilibre entre disponibilité matière et limitation des encours : un stock trop faible bloque le flux, un stock trop élevé immobilise des ressources.", "Balance material availability against work in progress: too little inventory blocks flow; too much ties up resources."),
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     caseStudy: {
       kind: copy("Simulation pédagogique", "Educational simulation"),
       steps: [
-        item("Paramétrer la ligne", "Configure the line", "Quatre postes — découpe, pliage, collage, étiquetage — disposent chacun d’un temps de traitement, d’un stock et d’un seuil de déclenchement. La durée de l’équipe est paramétrable.", "Four stations — cutting, folding, bonding and labeling — each have a processing time, inventory level and trigger threshold. Shift duration is configurable."),
+        item("Paramétrer la ligne", "Configure the line", "Quatre postes - découpe, pliage, collage, étiquetage - disposent chacun d’un temps de traitement, d’un stock et d’un seuil de déclenchement. La durée de l’équipe est paramétrable.", "Four stations - cutting, folding, bonding and labeling - each have a processing time, inventory level and trigger threshold. Shift duration is configurable."),
         item("Déclencher le flux tiré", "Trigger pull flow", "Chaque poste consomme des pièces. Lorsque son stock passe sous le seuil défini, une carte Kanban signale au poste amont le besoin de réapprovisionnement.", "Each station consumes parts. When inventory falls below its threshold, a Kanban card signals the replenishment need to the upstream station."),
         item("Observer et comparer", "Observe and compare", "Les stocks sont visualisés avec Matplotlib et les résultats enregistrés en CSV. La modification des seuils et des temps permet d’explorer plusieurs scénarios.", "Inventory is visualized with Matplotlib and results are logged to CSV. Changing thresholds and processing times enables scenario comparisons."),
       ],
@@ -131,7 +131,7 @@ export const projects: Project[] = [
   {
     id: "batteries", slug: "batteries", type: "data", github: "https://github.com/espoupou/Batteries",
     content: {
-      title: copy("Batteries — Analyse EIS / DRT", "Batteries — EIS / DRT analysis"),
+      title: copy("Batteries - Analyse EIS / DRT", "Batteries - EIS / DRT analysis"),
       subtitle: copy("Un outil Python pour traiter et visualiser des données électrochimiques.", "A Python tool for processing and visualizing electrochemical data."),
       summary: copy("Application Tkinter pour importer, prétraiter et comparer des données EIS/DRT, avec tracés Nyquist et modules spécialisés.", "Tkinter application to import, preprocess and compare EIS/DRT data, with Nyquist plots and specialized modules."),
       problem: copy("Réduire les manipulations manuelles de fichiers de mesure hétérogènes et structurer un traitement plus facile à suivre et à maintenir.", "Reduce manual handling of heterogeneous measurement files and structure a workflow that is easier to follow and maintain."),

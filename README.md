@@ -1,4 +1,4 @@
-# Kokou Espoir ATIVON — Portfolio
+# Kokou Espoir ATIVON - Portfolio
 
 Portfolio bilingue (FR/EN) axé sur le Génie Industriel et le Développement Logiciel, construit avec Next.js 15, Tailwind CSS v4, et Framer Motion.
 

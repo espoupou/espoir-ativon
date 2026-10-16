@@ -43,7 +43,7 @@ export function createPageMetadata({
           url: SOCIAL_IMAGE_PATH,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} — Génie industriel et digitalisation`,
+          alt: `${SITE_NAME} - Génie industriel et digitalisation`,
         },
       ],
     },
@@ -73,7 +73,7 @@ export function getExperienceMetadata(slug: string): Metadata {
   if (!experience) return {};
 
   return createPageMetadata({
-    title: `${experience.content.role.fr} — ${experience.content.organization}`,
+    title: `${experience.content.role.fr} - ${experience.content.organization}`,
     description: experience.content.context.fr,
     path: `/experiences/${experience.slug}`,
     type: "article",
