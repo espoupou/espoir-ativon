@@ -121,30 +121,49 @@ export const fr = {
   },
   skills: {
     title: "Compétences",
+    intro: "Génie industriel, qualité et outils numériques, développés au fil de ma formation EILCO / ENSAM et de mes projets de terrain.",
+    certificationLabel: "Certification",
+    certificationIssuer: "AIGPE - Advanced Innovation Group Pro Excellence",
+    certificationYear: "2026",
+    certificationDescription: "Amélioration continue, analyse des processus et résolution structurée de problèmes.",
+    verifyCredential: "Vérifier la certification",
+    fieldExperience: "Découvrir mon travail chez Kerry",
+    pause: "Mettre en pause",
+    resume: "Reprendre le défilement",
+    viewAll: "Explorer toutes les compétences par catégorie",
+    rowLabels: ["Compétences en génie industriel, qualité et industrie 4.0", "Compétences en données, logiciel, outils d'ingénierie et savoir-être"],
     categories: [
       {
-        name: "Génie industriel et amélioration continue",
-        items: "Production allégée (Lean), 5S, Kaizen, VSM, TRS/OEE, DMAIC, gestion de production, analyse de flux, standardisation."
+        name: "Génie industriel et excellence opérationnelle",
+        items: "Génie industriel, amélioration continue, excellence opérationnelle, Lean manufacturing, Lean Six Sigma, DMAIC, PDCA, Kaizen, 5S, SMED, VSM, Gemba, résolution de problèmes 3C, 8D, Ishikawa, 5 pourquoi, analyse des causes racines, Pareto, standardisation, SOP / SWOP / WES, mesure du travail, MODAPTS, takt time, équilibrage de ligne, analyse des goulots, performance de production, TRS/OEE, suivi des KPI, optimisation des processus, Kanban, Heijunka, planification de production, ordonnancement, méthode de Johnson, conduite du changement, chaîne logistique."
       },
       {
-        name: "Qualité et procédés",
-        items: "MSP/SPC, cartes de contrôle, Cp/Cpk, procédures, SIPOC, RACI, ISO 21001, analyse des écarts, indicateurs qualité."
+        name: "Qualité, procédés et sécurité",
+        items: "Management de la qualité, management des processus, MSP/SPC, cartes de contrôle, Cp/Cpk, audits qualité, audits LPA, confirmation en couches, gestion des non-conformités, actions correctives, analyse des écarts, SIPOC, RACI, ISO 21001, ISO 9001 (académique), ISO 14001 (académique), ISO 45001 (académique), QHSE, BPF/GMP, CCP / CP, fondamentaux HACCP, sécurité industrielle, documentation des processus, traçabilité, fiabilité des données."
       },
       {
-        name: "Données et analyse",
-        items: "Excel avancé, Python, pandas, NumPy, visualisation, corrélations, nettoyage de données, tableaux de bord."
+        name: "Industrie 4.0, automatisation et robotique",
+        items: "Industrie 4.0, usine intelligente, usine numérique, automatisation industrielle, automatisme avancé (académique), supervision industrielle, automates programmables (académique), robotique industrielle (académique), vision industrielle, intégration des systèmes industriels, acquisition de données industrielles, IIoT, digitalisation industrielle, systèmes de contrôle (académique), Node-RED, ESP32, MQTT, Cognex In-Sight."
       },
       {
-        name: "Digitalisation industrielle",
-        items: "Node-RED, ESP32, capteurs, MySQL, supervision locale, tableaux de bord, architecture de données, automatisation."
+        name: "Logiciels industriels et systèmes d'information",
+        items: "SAP, systèmes ERP, MES, Axelor ERP, Excel avancé, Power BI, Power Apps, Power Automate, VBA, Minitab, Tableau, Google Sheets, Google Apps Script, Microsoft Visio, EVOCON, Xperlean."
       },
       {
-        name: "Développement logiciel",
-        items: "HTML, CSS, JavaScript, React/Next.js, Django, NestJS, APIs REST, Flutter, Git/GitHub."
+        name: "Programmation et données",
+        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, analyse de données, visualisation de données, analyse statistique, régression, classification, fondamentaux du machine learning, automatisation des données, traitement de données, développement de tableaux de bord, Git, GitHub, GitHub Actions, Azure DevOps (familiarité)."
       },
       {
-        name: "Simulation & modélisation",
-        items: "Arena, MATLAB, simulation de flux, Kanban, ordonnancement, analyse de scénarios."
+        name: "Développement logiciel et intégration",
+        items: "HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, PHP, Laravel, Django, NestJS, APIs REST, Swagger, TypeORM, MongoDB, Socket.IO, Flutter, Tkinter, développement d'applications web."
+      },
+      {
+        name: "Simulation, ingénierie et conception",
+        items: "Simulation Arena, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, CAO mécanique, procédés de fabrication, simulation industrielle, recherche opérationnelle, modélisation des systèmes de production, simulation de flux, analyse de scénarios."
+      },
+      {
+        name: "Qualités professionnelles",
+        items: "Esprit analytique, résolution structurée de problèmes, collaboration interfonctionnelle, communication technique, formation et transfert de connaissances, coordination de projet, communication avec les parties prenantes, adaptabilité, autonomie, travail en équipe, expérience terrain, prise de décision basée sur les données."
       }
     ]
   },

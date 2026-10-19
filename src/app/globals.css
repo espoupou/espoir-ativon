@@ -62,6 +62,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Utilities */
+@keyframes skills-loop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.skills-window {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+}
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: skills-loop var(--skills-duration, 120s) linear infinite;
+}
+.skills-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  padding-right: 12px;
+}
+.skills-window:nth-child(2) .skills-track { animation-direction: reverse; }
+.skills-marquee:hover .skills-track,
+.skills-marquee:focus-within .skills-track { animation-play-state: paused; }
+.skills-marquee[data-paused="true"] .skills-track { animation: none; }
+.skills-marquee[data-paused="true"] .skills-copy { display: none; }
+.skills-marquee[data-paused="true"] .skills-window { overflow-x: auto; }
+.skills-window:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .skills-track { animation: none; }
+  .skills-copy { display: none; }
+  .skills-window { overflow-x: auto; }
+  .skills-motion-control { display: none; }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

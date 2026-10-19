@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* 7. SKILLS */}
-      <section className="py-24 max-w-[1200px] mx-auto px-5 md:px-8">
+      <section id="skills" className="w-full min-w-0 scroll-mt-24 py-24 max-w-[1200px] mx-auto px-5 md:px-8">
         <SectionHeading title={t.skills.title} />
         <SkillGrid />
       </section>

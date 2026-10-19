@@ -121,30 +121,49 @@ export const en = {
   },
   skills: {
     title: "Skills",
+    intro: "Industrial engineering, quality and digital tools, developed through my EILCO / ENSAM studies and practical projects.",
+    certificationLabel: "Certification",
+    certificationIssuer: "AIGPE - Advanced Innovation Group Pro Excellence",
+    certificationYear: "2026",
+    certificationDescription: "Continuous improvement, process analysis and structured problem-solving.",
+    verifyCredential: "Verify credential",
+    fieldExperience: "Explore my work at Kerry",
+    pause: "Pause scrolling",
+    resume: "Resume scrolling",
+    viewAll: "Explore all skills by category",
+    rowLabels: ["Industrial engineering, quality and Industry 4.0 skills", "Data, software, engineering tools and professional skills"],
     categories: [
       {
-        name: "Industrial engineering & continuous improvement",
-        items: "Lean manufacturing, 5S, Kaizen, VSM, OEE, DMAIC, production management, flow analysis, standardization."
+        name: "Industrial engineering & operational excellence",
+        items: "Industrial engineering, continuous improvement, operational excellence, Lean manufacturing, Lean Six Sigma, DMAIC, PDCA, Kaizen, 5S, SMED, VSM, Gemba, 3C problem solving, 8D, Ishikawa, 5 Whys, root cause analysis, Pareto, standardization, SOP / SWOP / WES, work measurement, MODAPTS, takt time, line balancing, bottleneck analysis, production performance, OEE, KPI monitoring, process optimization, Kanban, Heijunka, production planning, scheduling, Johnson scheduling, change management, supply chain."
       },
       {
-        name: "Quality & process",
-        items: "SPC, control charts, Cp/Cpk, procedures, SIPOC, RACI, ISO 21001, gap analysis, quality indicators."
+        name: "Quality, process & safety",
+        items: "Quality management, process management, SPC, control charts, Cp/Cpk, quality audits, LPA audits, layered confirmation, non-conformity management, corrective actions, gap analysis, SIPOC, RACI, ISO 21001, ISO 9001 (academic), ISO 14001 (academic), ISO 45001 (academic), QHSE, GMP, CCP / CP, HACCP fundamentals, industrial safety, process documentation, traceability, data reliability."
       },
       {
-        name: "Data & analysis",
-        items: "Advanced Excel, Python, pandas, NumPy, visualization, correlations, data cleaning, dashboards."
+        name: "Industry 4.0, automation & robotics",
+        items: "Industry 4.0, smart manufacturing, digital factory, industrial automation, advanced automation (academic), industrial supervision, PLC systems (academic), industrial robotics (academic), industrial computer vision, industrial systems integration, industrial data acquisition, IIoT, industrial digitalization, control systems (academic), Node-RED, ESP32, MQTT, Cognex In-Sight."
       },
       {
-        name: "Industrial digitalization",
-        items: "Node-RED, ESP32, sensors, MySQL, local supervision, dashboards, data architecture, automation."
+        name: "Industrial software & information systems",
+        items: "SAP, ERP systems, MES, Axelor ERP, Advanced Excel, Power BI, Power Apps, Power Automate, VBA, Minitab, Tableau, Google Sheets, Google Apps Script, Microsoft Visio, EVOCON, Xperlean."
       },
       {
-        name: "Software development",
-        items: "HTML, CSS, JavaScript, React/Next.js, Django, NestJS, REST APIs, Flutter, Git/GitHub."
+        name: "Programming & data",
+        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, data analysis, data visualization, statistical analysis, regression, classification, machine learning fundamentals, data automation, data processing, dashboard development, Git, GitHub, GitHub Actions, Azure DevOps (familiarity)."
       },
       {
-        name: "Simulation & modeling",
-        items: "Arena, MATLAB, flow simulation, Kanban, scheduling, scenario analysis."
+        name: "Software development & integration",
+        items: "HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, PHP, Laravel, Django, NestJS, REST APIs, Swagger, TypeORM, MongoDB, Socket.IO, Flutter, Tkinter, web application development."
+      },
+      {
+        name: "Simulation, engineering & design",
+        items: "Arena simulation, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, mechanical CAD, manufacturing processes, industrial simulation, operations research, production systems modeling, flow simulation, scenario analysis."
+      },
+      {
+        name: "Professional strengths",
+        items: "Analytical thinking, structured problem solving, cross-functional collaboration, technical communication, training and knowledge transfer, project coordination, stakeholder communication, adaptability, autonomy, teamwork, industrial fieldwork, data-driven decision making."
       }
     ]
   },
