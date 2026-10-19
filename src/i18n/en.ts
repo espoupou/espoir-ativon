@@ -191,7 +191,6 @@ export const en = {
     title: "Contact me",
     description: "I am looking for an internship starting in January 2027 and remain available to discuss continuous improvement, production, quality, industrial data and digitalization projects.",
     location: "Location: France, Hauts-de-France",
-    phoneLabel: "Phone & WhatsApp:",
     availability: "Availability: internship starting in January 2027.",
     sendEmail: "Send email"
   },

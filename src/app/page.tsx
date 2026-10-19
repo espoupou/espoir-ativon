@@ -288,9 +288,6 @@ export default function Home() {
           
           <div className="bg-cards border border-border p-8 rounded-2xl shadow-sm mb-10 text-left md:text-center">
             <p className="text-foreground font-medium mb-2">{t.contact.location}</p>
-            <p className="text-foreground font-medium mb-2">
-              {t.contact.phoneLabel} <a href="https://wa.me/33689905823" target="_blank" rel="noopener noreferrer" className="text-accent-green hover:underline">+33 6 89 90 58 23</a>
-            </p>
             {/* <p className="text-foreground-secondary text-sm">{t.contact.availability}</p> */}
           </div>
 

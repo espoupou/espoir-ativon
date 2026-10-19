@@ -120,6 +120,7 @@ export const identityJsonLd = {
       "@id": websiteId,
       url: SITE_URL,
       name: SITE_NAME,
+      alternateName: ["Espoir Ativon", "espoir-ativon.vercel.app"],
       inLanguage: ["fr", "en"],
       author: { "@id": personId },
     },

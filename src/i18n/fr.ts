@@ -191,7 +191,6 @@ export const fr = {
     title: "Me contacter",
     description: "Je recherche un stage à partir de janvier 2027 et reste disponible pour échanger autour de projets en amélioration continue, production, qualité, données industrielles et digitalisation.",
     location: "Localisation : France, Hauts-de-France",
-    phoneLabel: "Téléphone et WhatsApp :",
     availability: "Disponibilité : stage à partir de janvier 2027.",
     sendEmail: "Envoyer un email"
   },
