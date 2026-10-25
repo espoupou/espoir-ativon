@@ -2,8 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   CONTACT_EMAIL,
-  CONTACT_EMAIL_URL,
+  CONTACT_GMAIL_URL,
   CONTACT_HREF,
+  CONTACT_MAILTO_URL,
   normalizeHash,
 } from "../src/lib/contact.ts";
 
@@ -15,8 +16,10 @@ test("contact anchor always uses one canonical fragment", () => {
   assert.equal(normalizeHash(""), "");
 });
 
-test("email action opens a browser compose screen addressed correctly", () => {
-  const composeUrl = new URL(CONTACT_EMAIL_URL);
+test("email actions support the default app and optional Gmail compose", () => {
+  assert.equal(CONTACT_MAILTO_URL, `mailto:${CONTACT_EMAIL}`);
+
+  const composeUrl = new URL(CONTACT_GMAIL_URL);
 
   assert.equal(composeUrl.origin, "https://mail.google.com");
   assert.equal(composeUrl.pathname, "/mail/");

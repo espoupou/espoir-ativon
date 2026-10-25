@@ -211,7 +211,11 @@ export const fr = {
     description: "Je recherche un stage à partir de janvier 2027 et reste disponible pour échanger autour de projets en amélioration continue, production, qualité, données industrielles et digitalisation.",
     location: "Localisation : France, Hauts-de-France",
     availability: "Disponibilité : stage à partir de janvier 2027.",
-    sendEmail: "Envoyer un email"
+    sendEmail: "Utiliser mon application e-mail",
+    openGmail: "Ouvrir Gmail",
+    copyEmail: "Copier l'adresse",
+    copiedEmail: "Adresse copiée",
+    copyError: "Copie impossible. Sélectionnez l'adresse ci-dessus."
   },
   footer: {
     tagline: "Génie industriel · Données · Digitalisation industrielle",

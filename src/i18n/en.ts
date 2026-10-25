@@ -211,7 +211,11 @@ export const en = {
     description: "I am looking for an internship starting in January 2027 and remain available to discuss continuous improvement, production, quality, industrial data and digitalization projects.",
     location: "Location: France, Hauts-de-France",
     availability: "Availability: internship starting in January 2027.",
-    sendEmail: "Send email"
+    sendEmail: "Use my email app",
+    openGmail: "Open Gmail",
+    copyEmail: "Copy email",
+    copiedEmail: "Email copied",
+    copyError: "Could not copy automatically. Select the address above."
   },
   footer: {
     tagline: "Industrial Engineering · Data · Industrial Digitalization",

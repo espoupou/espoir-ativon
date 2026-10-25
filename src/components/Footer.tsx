@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useTranslation } from "@/i18n";
-import { CONTACT_EMAIL_URL, CONTACT_HREF } from "@/lib/contact";
+import { CONTACT_HREF, CONTACT_MAILTO_URL } from "@/lib/contact";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -56,11 +56,9 @@ export default function Footer() {
                 <GithubIcon size={20} />
               </a>
               <a
-                href={CONTACT_EMAIL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={CONTACT_MAILTO_URL}
                 className="size-11 inline-flex items-center justify-center rounded-md border border-border text-foreground-secondary hover:text-accent-green transition-colors"
-                aria-label={language === "fr" ? "Envoyer un e-mail à Espoir" : "Email Espoir"}
+                aria-label={language === "fr" ? "Envoyer un e-mail avec l'application par défaut" : "Send email with the default app"}
               >
                 <Mail size={20} />
               </a>

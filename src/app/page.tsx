@@ -11,8 +11,8 @@ import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillGrid from "@/components/SkillGrid";
+import ContactActions from "@/components/ContactActions";
 import Link from "next/link";
-import { CONTACT_EMAIL_URL } from "@/lib/contact";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -292,10 +292,14 @@ export default function Home() {
             {/* <p className="text-foreground-secondary text-sm">{t.contact.availability}</p> */}
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href={CONTACT_EMAIL_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-accent-green text-white font-medium rounded-md shadow-md hover:bg-emerald-600 transition-colors">
-              {t.contact.sendEmail}
-            </a>
+          <ContactActions
+            sendEmail={t.contact.sendEmail}
+            openGmail={t.contact.openGmail}
+            copyEmail={t.contact.copyEmail}
+            copiedEmail={t.contact.copiedEmail}
+            copyError={t.contact.copyError}
+          />
+          <div className="mt-4 flex justify-center">
             <a href={`/cv/cv-${language}.pdf`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
               {t.nav.downloadCV}
             </a>
