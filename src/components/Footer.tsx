@@ -5,6 +5,7 @@ import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useTranslation } from "@/i18n";
+import { CONTACT_EMAIL_URL, CONTACT_HREF } from "@/lib/contact";
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -29,7 +30,7 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-accent-green transition-colors">{t.nav.home}</Link></li>
               <li><Link href="/projects" className="hover:text-accent-green transition-colors">{t.nav.projects}</Link></li>
               <li><Link href="/experiences" className="hover:text-accent-green transition-colors">{t.nav.experiences}</Link></li>
-              <li><Link href="/#contact" className="hover:text-accent-green transition-colors">{t.nav.contact}</Link></li>
+              <li><a href={CONTACT_HREF} className="hover:text-accent-green transition-colors">{t.nav.contact}</a></li>
             </ul>
           </div>
 
@@ -55,7 +56,9 @@ export default function Footer() {
                 <GithubIcon size={20} />
               </a>
               <a
-                href="mailto:espoirativon@gmail.com"
+                href={CONTACT_EMAIL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="size-11 inline-flex items-center justify-center rounded-md border border-border text-foreground-secondary hover:text-accent-green transition-colors"
                 aria-label={language === "fr" ? "Envoyer un e-mail à Espoir" : "Email Espoir"}
               >

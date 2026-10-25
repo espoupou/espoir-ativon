@@ -12,6 +12,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import SkillGrid from "@/components/SkillGrid";
 import Link from "next/link";
+import { CONTACT_EMAIL_URL } from "@/lib/contact";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -73,9 +74,9 @@ export default function Home() {
             <Link href="/projects" className="px-6 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">
               {t.hero.ctaProjects}
             </Link>
-            <Link href="#contact" className="px-6 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">
+            <a href="#contact" className="px-6 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">
               {t.hero.ctaContact}
-            </Link>
+            </a>
           </div>
         </motion.div>
       </section>
@@ -292,7 +293,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="mailto:espoirativon@gmail.com" className="w-full sm:w-auto px-8 py-3 bg-accent-green text-white font-medium rounded-md shadow-md hover:bg-emerald-600 transition-colors">
+            <a href={CONTACT_EMAIL_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-accent-green text-white font-medium rounded-md shadow-md hover:bg-emerald-600 transition-colors">
               {t.contact.sendEmail}
             </a>
             <a href={`/cv/cv-${language}.pdf`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">

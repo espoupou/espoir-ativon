@@ -9,6 +9,7 @@ import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useTranslation } from "@/i18n";
+import { CONTACT_HREF } from "@/lib/contact";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,7 +62,7 @@ export default function Header() {
     { name: t.nav.home, href: "/" },
     { name: t.nav.projects, href: "/projects" },
     { name: t.nav.experiences, href: "/experiences" },
-    { name: t.nav.contact, href: "/#contact" },
+    { name: t.nav.contact, href: CONTACT_HREF, native: true },
   ];
   const isActive = (href: string) => pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
   const menuLabel = language === "fr"
@@ -88,20 +89,21 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-4 lg:gap-7" aria-label={language === "fr" ? "Navigation principale" : "Main navigation"}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              aria-current={isActive(link.href) ? "page" : undefined}
-              className={`text-sm font-medium transition-colors ${
-                isActive(link.href)
-                  ? "text-accent-green"
-                  : "text-foreground-secondary hover:text-foreground"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const className = `text-sm font-medium transition-colors ${
+              isActive(link.href)
+                ? "text-accent-green"
+                : "text-foreground-secondary hover:text-foreground"
+            }`;
+
+            return link.native ? (
+              <a key={link.name} href={link.href} className={className}>{link.name}</a>
+            ) : (
+              <Link key={link.name} href={link.href} aria-current={isActive(link.href) ? "page" : undefined} className={className}>
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
@@ -143,21 +145,20 @@ export default function Header() {
             className="md:hidden bg-background-secondary border-t border-border mt-3 max-h-[calc(100dvh-80px)] overflow-y-auto"
           >
             <div className="flex flex-col px-5 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  aria-current={isActive(link.href) ? "page" : undefined}
-                  className={`min-h-11 flex items-center text-base font-medium py-2 ${
-                    isActive(link.href)
-                      ? "text-accent-green"
-                      : "text-foreground-secondary"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const className = `min-h-11 flex items-center text-base font-medium py-2 ${
+                  isActive(link.href) ? "text-accent-green" : "text-foreground-secondary"
+                }`;
+                const closeMenu = () => setMobileMenuOpen(false);
+
+                return link.native ? (
+                  <a key={link.name} href={link.href} onClick={closeMenu} className={className}>{link.name}</a>
+                ) : (
+                  <Link key={link.name} href={link.href} onClick={closeMenu} aria-current={isActive(link.href) ? "page" : undefined} className={className}>
+                    {link.name}
+                  </Link>
+                );
+              })}
               <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-border">
                 <div className="flex items-center space-x-4">
                   <ThemeToggle />
