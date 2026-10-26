@@ -5,7 +5,7 @@ import { useTranslation } from "@/i18n";
 import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
 import { motion } from "framer-motion";
-import { ArrowRight, Factory, Code, Database, Gauge, GitBranch } from "lucide-react";
+import { ArrowRight, CalendarDays, Factory, Code, Database, Gauge, GitBranch, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
@@ -283,28 +283,55 @@ export default function Home() {
       </section>
 
       {/* 10. CONTACT */}
-      <section id="contact" className="py-24 max-w-[800px] mx-auto px-5 md:px-8 text-center">
-        <AnimatedSection>
-          <SectionHeading title={t.contact.title} align="center" subtitle={t.contact.description} />
-          
-          <div className="bg-cards border border-border p-8 rounded-2xl shadow-sm mb-10 text-left md:text-center">
-            <p className="text-foreground font-medium mb-2">{t.contact.location}</p>
-            {/* <p className="text-foreground-secondary text-sm">{t.contact.availability}</p> */}
-          </div>
+      <section id="contact" className="scroll-mt-24 border-y border-border bg-background-secondary py-24">
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+          <AnimatedSection>
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-cards shadow-lg shadow-black/5">
+              <div className="pointer-events-none absolute -left-20 -top-24 size-64 rounded-full bg-accent-green/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-28 -right-20 size-72 rounded-full bg-accent-blue/10 blur-3xl" />
 
-          <ContactActions
-            sendEmail={t.contact.sendEmail}
-            openGmail={t.contact.openGmail}
-            copyEmail={t.contact.copyEmail}
-            copiedEmail={t.contact.copiedEmail}
-            copyError={t.contact.copyError}
-          />
-          <div className="mt-4 flex justify-center">
-            <a href={`/cv/cv-${language}.pdf`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3 bg-background border border-border text-foreground font-medium rounded-md shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              {t.nav.downloadCV}
-            </a>
-          </div>
-        </AnimatedSection>
+              <div className="relative grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
+                <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
+                  <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-accent-green/25 bg-accent-green/10 px-4 py-2 text-sm font-semibold text-accent-green">
+                    <CalendarDays size={17} aria-hidden="true" />
+                    {t.contact.availability}
+                  </div>
+                  <h2 className="mb-5 font-heading text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+                    {t.contact.title}
+                  </h2>
+                  <p className="max-w-xl text-base leading-relaxed text-foreground-secondary sm:text-lg">
+                    {t.contact.description}
+                  </p>
+                  <div className="mt-8 flex items-center gap-3 text-sm font-medium text-foreground sm:text-base">
+                    <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-accent-blue/10 text-accent-blue">
+                      <MapPin size={19} aria-hidden="true" />
+                    </span>
+                    {t.contact.location}
+                  </div>
+                </div>
+
+                <div className="border-t border-border bg-background/65 p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-10">
+                  <h3 className="font-heading text-xl font-bold text-foreground sm:text-2xl">
+                    {t.contact.contactOptions}
+                  </h3>
+                  <p className="mb-6 mt-2 text-sm leading-relaxed text-foreground-secondary">
+                    {t.contact.contactHint}
+                  </p>
+                  <ContactActions
+                    sendEmail={t.contact.sendEmail}
+                    openGmail={t.contact.openGmail}
+                    copyEmail={t.contact.copyEmail}
+                    copiedEmail={t.contact.copiedEmail}
+                    copyError={t.contact.copyError}
+                    emailLabel={t.contact.emailLabel}
+                    downloadCV={t.nav.downloadCV}
+                    cvHref={`/cv/cv-${language}.pdf`}
+                  />
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
 
     </div>
