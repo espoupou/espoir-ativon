@@ -283,8 +283,8 @@ export default function Home() {
       </section>
 
       {/* 10. CONTACT */}
-      <section id="contact" className="scroll-mt-24 border-y border-border bg-background-secondary py-24">
-        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+      <section id="contact" className="scroll-mt-24 border-y border-border bg-background-secondary py-24 lg:flex lg:min-h-[calc(100vh-5rem)] lg:items-center">
+        <div className="mx-auto w-full max-w-[1200px] px-5 md:px-8">
           <AnimatedSection>
             <div className="relative overflow-hidden rounded-3xl border border-border bg-cards shadow-lg shadow-black/5">
               <div className="pointer-events-none absolute -left-20 -top-24 size-64 rounded-full bg-accent-green/10 blur-3xl" />
