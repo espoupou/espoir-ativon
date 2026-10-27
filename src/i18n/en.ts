@@ -131,7 +131,7 @@ export const en = {
     pause: "Pause scrolling",
     resume: "Resume scrolling",
     viewAll: "Explore all skills by category",
-    rowLabels: ["Industrial engineering, quality and Industry 4.0 skills", "Data, software, engineering tools and professional skills"],
+    rowLabels: ["Industrial engineering, quality, applied statistics and Industry 4.0 skills", "Data, AI, software, engineering tools and professional skills"],
     categories: [
       {
         name: "Industrial engineering & operational excellence",
@@ -140,6 +140,10 @@ export const en = {
       {
         name: "Quality, process & safety",
         items: "Quality management, process management, SPC, control charts, Cp/Cpk, quality audits, LPA audits, layered confirmation, non-conformity management, corrective actions, gap analysis, SIPOC, RACI, ISO 21001, ISO 9001 (academic), ISO 14001 (academic), ISO 45001 (academic), QHSE, GMP, CCP / CP, HACCP fundamentals, industrial safety, process documentation, traceability, data reliability."
+      },
+      {
+        name: "Applied statistics & Lean Six Sigma methods",
+        items: "Hypothesis testing, null and alternative hypotheses, 1-sample t-test, 2-sample t-test, paired t-test, one-way ANOVA, ANOM, chi-square test, Mann-Whitney test, Mood's median test, Kruskal-Wallis test, variance tests, correlation analysis, regression analysis, fitted-line plots, normality testing, Box-Cox transformation, sampling methods, sample-size determination, process capability analysis, measurement system analysis, I-MR charts, p charts, np charts, c charts, u charts, control-chart selection, FMEA, fault-tree analysis, control plans, cost of poor quality, Voice of Customer, affinity diagrams, Kano analysis, CTQ trees, project charters."
       },
       {
         name: "Industry 4.0, automation & robotics",
@@ -152,6 +156,10 @@ export const en = {
       {
         name: "Programming & data",
         items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, data analysis, data visualization, statistical analysis, regression, classification, machine learning fundamentals, data automation, data processing, dashboard development, Git, GitHub, GitHub Actions, Azure DevOps (familiarity)."
+      },
+      {
+        name: "Generative AI & prompt engineering",
+        items: "Prompt engineering, prompt evaluation, structured outputs, tool calling, model and token selection, OpenAI API, asynchronous API requests, vector embeddings, information retrieval, retrieval-augmented generation, Supabase pgvector, LangChain, LangGraph, AI agent workflows, coding agents, LLM evaluation, vision prompting, realtime API concepts, text-generation workflows, image-generation workflows."
       },
       {
         name: "Software development & integration",

@@ -15,10 +15,9 @@ export default function SkillGrid() {
     ...category,
     skills: category.items.replace(/\.$/, "").split(", "),
   }));
-  const rows = [
-    groups.filter((_, i) => [0, 1, 2].includes(i)),
-    groups.filter((_, i) => [3, 4, 5, 6, 7].includes(i)),
-  ].map((row) => [...new Set(row.flatMap((group) => group.skills))]);
+  const industrialRowEnd = 4;
+  const rows = [groups.slice(0, industrialRowEnd), groups.slice(industrialRowEnd)]
+    .map((row) => [...new Set(row.flatMap((group) => group.skills))]);
 
   return (
     <div className="min-w-0 space-y-7">

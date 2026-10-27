@@ -131,7 +131,7 @@ export const fr = {
     pause: "Mettre en pause",
     resume: "Reprendre le défilement",
     viewAll: "Explorer toutes les compétences par catégorie",
-    rowLabels: ["Compétences en génie industriel, qualité et industrie 4.0", "Compétences en données, logiciel, outils d'ingénierie et savoir-être"],
+    rowLabels: ["Compétences en génie industriel, qualité, statistiques appliquées et industrie 4.0", "Compétences en données, IA, logiciel, outils d'ingénierie et savoir-être"],
     categories: [
       {
         name: "Génie industriel et excellence opérationnelle",
@@ -140,6 +140,10 @@ export const fr = {
       {
         name: "Qualité, procédés et sécurité",
         items: "Management de la qualité, management des processus, MSP/SPC, cartes de contrôle, Cp/Cpk, audits qualité, audits LPA, confirmation en couches, gestion des non-conformités, actions correctives, analyse des écarts, SIPOC, RACI, ISO 21001, ISO 9001 (académique), ISO 14001 (académique), ISO 45001 (académique), QHSE, BPF/GMP, CCP / CP, fondamentaux HACCP, sécurité industrielle, documentation des processus, traçabilité, fiabilité des données."
+      },
+      {
+        name: "Statistiques appliquées et méthodes Lean Six Sigma",
+        items: "Tests d'hypothèses, hypothèses nulle et alternative, test t à 1 échantillon, test t à 2 échantillons, test t apparié, ANOVA à un facteur, ANOM, test du khi-deux, test de Mann-Whitney, test de la médiane de Mood, test de Kruskal-Wallis, tests de variance, analyse de corrélation, analyse de régression, graphiques de droite ajustée, tests de normalité, transformation de Box-Cox, méthodes d'échantillonnage, détermination de la taille d'échantillon, analyse de capabilité, analyse du système de mesure, cartes I-MR, cartes p, cartes np, cartes c, cartes u, sélection des cartes de contrôle, AMDEC, arbre de défaillances, plans de contrôle, coût de la non-qualité, voix du client, diagrammes d'affinités, analyse de Kano, arbres CTQ, chartes de projet."
       },
       {
         name: "Industrie 4.0, automatisation et robotique",
@@ -152,6 +156,10 @@ export const fr = {
       {
         name: "Programmation et données",
         items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, analyse de données, visualisation de données, analyse statistique, régression, classification, fondamentaux du machine learning, automatisation des données, traitement de données, développement de tableaux de bord, Git, GitHub, GitHub Actions, Azure DevOps (familiarité)."
+      },
+      {
+        name: "IA générative et ingénierie de prompts",
+        items: "Ingénierie de prompts, évaluation de prompts, sorties structurées, appel d'outils, sélection des modèles et des jetons, API OpenAI, requêtes API asynchrones, plongements vectoriels, recherche d'information, génération augmentée par récupération, Supabase pgvector, LangChain, LangGraph, workflows d'agents IA, agents de code, évaluation des LLM, prompting visuel, concepts d'API temps réel, workflows de génération de texte, workflows de génération d'images."
       },
       {
         name: "Développement logiciel et intégration",
