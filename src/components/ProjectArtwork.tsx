@@ -3,6 +3,7 @@ import type { Language } from "@/i18n/LanguageContext";
 const artworkLabels: Record<string, { code: string; fr: string; en: string; steps: [string, string, string] }> = {
   "super-cerame": { code: "D / V / R", fr: "Maîtriser le procédé", en: "Understand the process", steps: ["D", "V", "R"] },
   "ligne-devidoir": { code: "LEAN / ARENA", fr: "Équilibrer les flux", en: "Balance the flow", steps: ["01", "02", "03"] },
+  tricycle: { code: "CAD / CAM", fr: "Concevoir puis fabriquer", en: "Design then manufacture", steps: ["CAD", "CAM", "TEST"] },
   kanban: { code: "PULL / FLOW", fr: "Produire au bon moment", en: "Produce when needed", steps: ["01", "02", "03"] },
   msp: { code: "X̄ / R / Cp", fr: "Comprendre les variations", en: "Understand variation", steps: ["X̄", "R", "Cp"] },
   batteries: { code: "EIS / DRT", fr: "Lire les données", en: "Make sense of data", steps: ["EIS", "DRT", "DATA"] },
@@ -37,6 +38,19 @@ export default function ProjectArtwork({ projectId, language }: { projectId: str
               <text x={x} y="183" textAnchor="middle" fill={i === 1 ? "#c7d888" : "currentColor"} stroke="none" fontFamily="monospace" fontSize="23">{art.steps[i]}</text>
             </g>)}
             <path d="M211 173H277M360 173H427M262 168L269 173L262 178M412 168L419 173L412 178" strokeOpacity=".5" />
+          </g>
+        ) : projectId === "tricycle" ? (
+          <g stroke="currentColor" strokeWidth="2">
+            <circle cx="188" cy="236" r="48" fill="currentColor" fillOpacity=".035" />
+            <circle cx="467" cy="236" r="48" fill="currentColor" fillOpacity=".035" />
+            <circle cx="188" cy="236" r="11" stroke="#c7d888" />
+            <circle cx="467" cy="236" r="11" stroke="#c7d888" />
+            <path d="M188 236L284 127L396 236H188L307 236L467 236" stroke="#c7d888" strokeWidth="3" />
+            <path d="M284 127L324 93M310 93H344M284 127L307 236M307 236L396 236" />
+            <path d="M284 127L254 157M254 157L188 236M254 157L396 236" strokeOpacity=".55" />
+            <path d="M396 236L429 188L467 236M429 188L444 151" strokeOpacity=".7" />
+            <rect x="371" y="218" width="50" height="15" rx="4" fill="currentColor" fillOpacity=".08" />
+            <text x="320" y="283" textAnchor="middle" fill="currentColor" stroke="none" fontFamily="monospace" fontSize="13">TOPSOLID / CNC / ASSEMBLY</text>
           </g>
         ) : projectId === "kanban" ? (
           <g stroke="currentColor" strokeWidth="2">

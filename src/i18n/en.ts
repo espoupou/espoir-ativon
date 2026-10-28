@@ -106,6 +106,9 @@ export const en = {
     githubRepository: "View GitHub repository",
     githubCode: "View code on GitHub",
     overview: "Project overview",
+    approach: "Project approach",
+    findings: "Results and lessons learned",
+    scope: "Scope and limitations",
     problem: "Problem:",
     role: "Role:",
     contribution: "Contribution:"
@@ -216,7 +219,20 @@ export const en = {
     ]
   },
   certifications: {
-    title: "Certifications"
+    title: "Certifications and distinctions",
+    intro: "Verifiable milestones across continuous improvement, software development, robotics and competitive programming.",
+    verify: "Verify certification"
+  },
+  research: {
+    title: "Research and technical writing",
+    intro: "A synthesis connecting materials science, reliability and industrial scale-up.",
+    authors: "Authors",
+    topics: "Topics covered",
+    viewDetails: "Explore the manuscript",
+    back: "Back to home",
+    overview: "Work overview",
+    content: "Review content",
+    transparency: "Status and transparency"
   },
   contact: {
     title: "Contact me",

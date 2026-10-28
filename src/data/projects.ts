@@ -78,6 +78,31 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "tricycle", slug: "vehicule-tricycle", type: "industrial",
+    content: {
+      title: copy("Véhicule tricycle - Conception et fabrication", "Tricycle vehicle - Design and manufacturing"),
+      subtitle: copy("Du besoin fonctionnel à l'usinage d'un système de direction.", "From functional requirements to manufacturing a steering system."),
+      summary: copy("Projet collectif de conception mécanique autour d'un châssis existant : analyse fonctionnelle, modélisation TopSolid, choix des matériaux, fabrication et assemblage du système de direction.", "Team mechanical design project based on an existing chassis: functional analysis, TopSolid modeling, material selection, manufacturing and steering-system assembly."),
+      problem: copy("Adapter un châssis de tricycle existant pour construire un système de direction fonctionnel, précis et compatible avec les contraintes de fabrication disponibles.", "Adapt an existing tricycle chassis to build a functional and precise steering system compatible with the available manufacturing resources."),
+      role: copy("Contribution au travail d'équipe sur l'analyse fonctionnelle, la conception des composants, la préparation des gammes d'usinage, la fabrication, l'assemblage et les essais.", "Contributed to the team effort across functional analysis, component design, machining process planning, manufacturing, assembly and testing."),
+      tools: ["TopSolid", "CAO / CAD", "FAO / CAM", "CNC", "FAST"],
+      contribution: copy("Une démarche complète reliant cahier des charges, modèles 3D, dessins de définition, sélection des matériaux et réalisation physique de composants du système de direction.", "A complete workflow connecting functional specifications, 3D models, technical drawings, material selection and physical production of steering-system components."),
+    },
+    caseStudy: {
+      kind: copy("Projet de conception et fabrication - 2024", "Design and manufacturing project - 2024"),
+      steps: [
+        item("Analyser le besoin", "Analyze the need", "Étude du châssis existant, diagramme de contexte, bête à cornes, diagramme FAST et cahier des charges fonctionnel pour structurer les besoins du véhicule.", "Studied the existing chassis and used a context diagram, horn diagram, FAST diagram and functional specifications to structure the vehicle requirements."),
+        item("Concevoir le système de direction", "Design the steering system", "Prise de mesures, transformation de la rotation du volant en translation, modélisation des composants et dessins de définition avec TopSolid.", "Took measurements, designed the steering-wheel rotation-to-translation mechanism, modeled components and produced technical drawings with TopSolid."),
+        item("Fabriquer et assembler", "Manufacture and assemble", "Sélection de l'aluminium, de l'acier et du cuivre, préparation des gammes d'usinage, fraisage, tournage, perçage, alésage, filetage, assemblage et essais du mécanisme.", "Selected aluminum, steel and copper, prepared machining process plans, then milled, turned, drilled, reamed, threaded, assembled and tested the mechanism."),
+      ],
+      findings: [
+        item("Une chaîne mécanique complète", "A complete mechanical chain", "Le mécanisme conçu transmet la rotation du volant aux roues par un ensemble de pièces intermédiaires transformant le mouvement en translation.", "The designed mechanism transfers steering-wheel rotation to the wheels through intermediate components that convert the motion into translation."),
+        item("Conception pensée pour la fabrication", "Design for manufacturing", "Les choix de géométrie, de matériaux, de machines et d'outillage ont été documentés dans les dessins de définition et les gammes d'usinage.", "Geometry, material, machine and tooling choices were documented through technical drawings and machining process plans."),
+      ],
+      scope: copy("Projet collectif académique réalisé à partir d'un châssis existant. Le dossier documente la conception et la fabrication du système de direction ; il ne revendique ni participation au Shell Eco-marathon, ni performance énergétique mesurée.", "Academic team project based on an existing chassis. The report documents steering-system design and manufacturing; it does not claim participation in the Shell Eco-marathon or measured energy-performance results."),
+    },
+  },
+  {
     id: "kanban", slug: "kanban-simulation", type: "industrial",
     github: "https://github.com/espoupou/Kanban-Simulation-with-Stock-Sizing",
     content: {

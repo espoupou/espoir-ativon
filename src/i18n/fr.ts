@@ -106,6 +106,9 @@ export const fr = {
     githubRepository: "Voir le dépôt GitHub",
     githubCode: "Voir le code sur GitHub",
     overview: "Aperçu du projet",
+    approach: "Démarche du projet",
+    findings: "Résultats et apprentissages",
+    scope: "Périmètre et limites",
     problem: "Problème :",
     role: "Rôle :",
     contribution: "Apport :"
@@ -216,7 +219,20 @@ export const fr = {
     ]
   },
   certifications: {
-    title: "Certifications"
+    title: "Certifications et distinctions",
+    intro: "Des repères vérifiables de mon parcours en amélioration continue, développement logiciel, robotique et programmation compétitive.",
+    verify: "Vérifier la certification"
+  },
+  research: {
+    title: "Recherche et rédaction technique",
+    intro: "Un travail de synthèse qui relie sciences des matériaux, fiabilité et industrialisation.",
+    authors: "Auteurs",
+    topics: "Axes étudiés",
+    viewDetails: "Découvrir le manuscrit",
+    back: "Retour à l'accueil",
+    overview: "Présentation du travail",
+    content: "Contenu de la revue",
+    transparency: "Statut et transparence"
   },
   contact: {
     title: "Me contacter",

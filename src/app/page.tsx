@@ -4,8 +4,10 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { useTranslation } from "@/i18n";
 import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
+import { certifications } from "@/data/certifications";
+import { researchWorks } from "@/data/research";
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarDays, Factory, Code, Database, Gauge, GitBranch, MapPin } from "lucide-react";
+import { ArrowRight, Award, BookOpen, CalendarDays, Factory, Code, Database, ExternalLink, Gauge, GitBranch, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
@@ -20,6 +22,7 @@ export default function Home() {
 
   const highlightedProjects = projects.slice(0, 5);
   const mainExperiences = experiences.slice(0, 3);
+  const featuredResearch = researchWorks[0];
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
@@ -207,7 +210,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. EXPERIENCES PREVIEW */}
+      {/* 6. RESEARCH AND TECHNICAL WRITING */}
+      <section className="border-y border-border bg-background-secondary py-24">
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+          <SectionHeading title={t.research.title} subtitle={t.research.intro} />
+          <AnimatedSection className="mt-12">
+            <Link
+              href={`/research/${featuredResearch.slug}`}
+              className="group grid overflow-hidden rounded-3xl border border-border bg-cards shadow-sm transition hover:-translate-y-1 hover:border-accent-blue/35 hover:shadow-lg lg:grid-cols-[0.8fr_1.2fr]"
+            >
+              <div className="relative flex min-h-64 flex-col justify-between overflow-hidden bg-[#123c33] p-7 text-[#f3f0df] sm:p-10">
+                <div className="absolute -right-16 -top-20 size-64 rounded-full border border-[#c7d888]/20" />
+                <div className="absolute -bottom-24 -left-16 size-72 rounded-full border border-[#c7d888]/15" />
+                <div className="relative flex items-center gap-3 text-xs font-mono uppercase tracking-[0.16em] text-[#c7d888]">
+                  <BookOpen size={18} aria-hidden="true" />
+                  {featuredResearch.status[language]}
+                </div>
+                <div className="relative mt-14">
+                  <div className="mb-5 grid grid-cols-4 gap-2" aria-hidden="true">
+                    {["ABX3", "n-i-p", "p-i-n", "R2R"].map((label) => (
+                      <span key={label} className="rounded-md border border-white/15 bg-white/5 px-2 py-3 text-center font-mono text-xs">
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="font-mono text-xs leading-relaxed text-[#dce4c6]">
+                    {featuredResearch.topics.map((topic) => topic[language]).join(" / ")}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+                <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-accent-blue">
+                  {t.research.authors}: {featuredResearch.authors.join(", ")}
+                </p>
+                <h3 className="font-heading text-2xl font-bold leading-tight text-foreground sm:text-3xl">
+                  {featuredResearch.title}
+                </h3>
+                <p className="mt-5 max-w-2xl leading-relaxed text-foreground-secondary">
+                  {featuredResearch.summary[language]}
+                </p>
+                <span className="mt-8 inline-flex items-center font-semibold text-accent-green">
+                  {t.research.viewDetails}
+                  <ArrowRight size={17} className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </span>
+              </div>
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 7. EXPERIENCES PREVIEW */}
       <section className="py-24 bg-background-secondary border-y border-border">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="flex justify-between items-end mb-12">
@@ -226,13 +278,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. SKILLS */}
+      {/* 8. SKILLS */}
       <section id="skills" className="w-full min-w-0 scroll-mt-24 py-24 max-w-[1200px] mx-auto px-5 md:px-8">
         <SectionHeading title={t.skills.title} />
         <SkillGrid />
       </section>
 
-      {/* 8. EDUCATION */}
+      {/* 9. EDUCATION */}
       <section className="py-20 bg-background-secondary border-y border-border">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <SectionHeading title={t.education.title} />
@@ -282,7 +334,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. CONTACT */}
+      {/* 10. CERTIFICATIONS AND DISTINCTIONS */}
+      <section id="certifications" className="scroll-mt-24 py-24">
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+          <SectionHeading title={t.certifications.title} subtitle={t.certifications.intro} />
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {certifications.map((certification, index) => (
+              <AnimatedSection key={certification.id} delay={index * 0.08} className="h-full">
+                <article className="flex h-full flex-col rounded-2xl border border-border bg-cards p-6 shadow-sm transition hover:border-accent-yellow/35 hover:shadow-md">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent-yellow/10 text-accent-yellow">
+                      <Award size={22} aria-hidden="true" />
+                    </span>
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold uppercase tracking-wider text-foreground-secondary">
+                      {certification.kind[language]}
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-xl font-bold leading-snug text-foreground">
+                    {certification.title[language]}
+                  </h3>
+                  <p className="mt-3 text-sm font-semibold text-accent-blue">
+                    {certification.issuer[language]} - {certification.year}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-foreground-secondary">
+                    {certification.description[language]}
+                  </p>
+                  {certification.credentialUrl && (
+                    <a
+                      href={certification.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto inline-flex items-center pt-6 text-sm font-semibold text-accent-green hover:underline"
+                    >
+                      {t.certifications.verify}
+                      <ExternalLink size={15} className="ml-2" aria-hidden="true" />
+                    </a>
+                  )}
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. CONTACT */}
       <section id="contact" className="scroll-mt-24 border-y border-border bg-background-secondary py-24 lg:flex lg:min-h-[calc(100vh-5rem)] lg:items-center">
         <div className="mx-auto w-full max-w-[1200px] px-5 md:px-8">
           <AnimatedSection>
