@@ -166,7 +166,7 @@ export const fr = {
       },
       {
         name: "Développement logiciel et intégration",
-        items: "HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, PHP, Laravel, Django, NestJS, APIs REST, Swagger, TypeORM, MongoDB, Socket.IO, Flutter, Tkinter, développement d'applications web."
+        items: "HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, PHP, Laravel, Django, NestJS, APIs REST, Swagger, TypeORM, MongoDB, Socket.IO, Flutter, Tkinter, développement d'applications web, cybersécurité, bonnes pratiques de cybersécurité, vulnérabilités réseau, confidentialité des données, détection des menaces, fondamentaux Linux, ligne de commande Linux."
       },
       {
         name: "Simulation, ingénierie et conception",

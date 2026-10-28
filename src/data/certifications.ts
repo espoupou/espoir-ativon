@@ -38,6 +38,30 @@ export const certifications: Certification[] = [
     credentialUrl: "https://savanna.alxafrica.com/certificates/ECSB853smy",
   },
   {
+    id: "cisco-introduction-cybersecurity",
+    kind: copy("Certification", "Certification"),
+    title: copy("Introduction à la cybersécurité", "Introduction to Cybersecurity"),
+    issuer: copy("Cisco Networking Academy", "Cisco Networking Academy"),
+    year: "2021",
+    description: copy(
+      "Cours validé sur les menaces cyber, les vulnérabilités réseau, la confidentialité des données et la détection des menaces.",
+      "Completed course covering cyber threats, network vulnerabilities, data privacy and threat detection.",
+    ),
+    credentialUrl: "https://www.credly.com/badges/fe7ce991-b37a-4953-8169-2878da45d01c",
+  },
+  {
+    id: "cisco-linux-unhatched",
+    kind: copy("Attestation", "Course certificate"),
+    title: copy("NDG Linux Unhatched", "NDG Linux Unhatched"),
+    issuer: copy("Cisco Networking Academy - NDG", "Cisco Networking Academy - NDG"),
+    year: "2020",
+    description: copy(
+      "Initiation aux fondamentaux de Linux, à la ligne de commande et à l'environnement open source.",
+      "Introduction to Linux fundamentals, the command line and the open-source environment.",
+    ),
+    credentialUrl: "https://www.netacad.com/certificates/?issuanceId=9172234a-2c71-4a29-b46b-4d58462693eb",
+  },
+  {
     id: "arduino-workshop",
     kind: copy("Formation", "Training"),
     title: copy("Arduino - cours et atelier pratique", "Arduino - course and practical workshop"),
