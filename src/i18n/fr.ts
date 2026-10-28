@@ -108,7 +108,7 @@ export const fr = {
     overview: "Aperçu du projet",
     approach: "Démarche du projet",
     findings: "Résultats et apprentissages",
-    scope: "Périmètre et limites",
+    scope: "Cadre du projet",
     problem: "Problème :",
     role: "Rôle :",
     contribution: "Apport :"

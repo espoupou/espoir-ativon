@@ -49,7 +49,7 @@ export const projects: Project[] = [
         item("Mieux organiser les contrôles de densité", "Better timing of density checks", "Les contrôles pouvaient être répétés toutes les 5 minutes. J’ai proposé d’estimer le temps d’approche de la densité cible pour revenir environ 3 à 5 minutes avant l’ajustement final. Dans certains cas observés : moins de mesures répétitives, de sollicitations du brassage et de petits gaspillages de barbotine.", "Checks could be repeated every 5 minutes. I proposed estimating the time to approach the target density and returning about 3–5 minutes before the final adjustment. In some observed cases: fewer repeated measurements, less unnecessary stirring and less minor slip waste."),
         item("Relier produit et information", "Connect products and information", "Appui à l’analyse du parcours de traçabilité : tri → emballage → palettisation → code-barres / QR code → scan cariste → stockage → consultation Xperlean.", "Supported analysis of the traceability flow: sorting → packaging → palletization → barcode / QR code → forklift operator scan → storage → Xperlean lookup."),
       ],
-      scope: copy("Les analyses sont exploratoires et les améliorations observées restent qualitatives. Les corrélations servent à formuler des hypothèses à confronter au terrain ; aucun gain global chiffré n’est revendiqué.", "The analysis is exploratory and observed improvements are qualitative. Correlations support hypotheses to check on the shop floor; no quantified overall gain is claimed."),
+      scope: copy("L'étude s'appuie sur les observations et les données disponibles pendant le stage. Les résultats permettent d'orienter les contrôles et les pistes d'amélioration à approfondir sur le terrain.", "The study draws on the observations and data available during the internship. Its results help guide shop-floor checks and identify improvement opportunities for further investigation."),
     },
   },
   {
@@ -74,7 +74,7 @@ export const projects: Project[] = [
         item("Un goulot identifié au premier poste", "A bottleneck at the first station", "Les temps présentés dans l’étude sont de 29,6 s, 25,5 s, 16,7 s, 14,9 s et 25,4 s pour les cinq postes, face à un takt time d’environ 20 s. Le poste 1 présente le temps le plus élevé et une forte variabilité.", "The study reports station times of 29.6 s, 25.5 s, 16.7 s, 14.9 s and 25.4 s against a takt time of about 20 s. Station 1 has the longest time and high variability."),
         item("Un scénario retenu par simulation", "A scenario selected through simulation", "Le renforcement du goulot (scénario B) a été retenu parmi les configurations étudiées. La simulation situe sa capacité autour de 30 000 unités par mois, sous les hypothèses du projet.", "Reinforcing the bottleneck (scenario B) was selected among the configurations studied. The simulation places its capacity at around 30,000 units per month under the project assumptions."),
       ],
-      scope: copy("Les capacités annoncées sont des estimations et résultats de simulation, pas des gains mesurés après déploiement en usine. La supervision est un prototype.", "The stated capacities are estimates and simulation results, not gains measured after factory deployment. The monitoring system is a prototype."),
+      scope: copy("Les capacités présentées proviennent des scénarios simulés avec ARENA. La chaîne de supervision a été développée sous forme de prototype.", "The presented capacities come from scenarios simulated with ARENA. The monitoring system was developed as a prototype."),
     },
   },
   {
@@ -99,7 +99,7 @@ export const projects: Project[] = [
         item("Une chaîne mécanique complète", "A complete mechanical chain", "Le mécanisme conçu transmet la rotation du volant aux roues par un ensemble de pièces intermédiaires transformant le mouvement en translation.", "The designed mechanism transfers steering-wheel rotation to the wheels through intermediate components that convert the motion into translation."),
         item("Conception pensée pour la fabrication", "Design for manufacturing", "Les choix de géométrie, de matériaux, de machines et d'outillage ont été documentés dans les dessins de définition et les gammes d'usinage.", "Geometry, material, machine and tooling choices were documented through technical drawings and machining process plans."),
       ],
-      scope: copy("Projet collectif académique réalisé à partir d'un châssis existant. Le dossier documente la conception et la fabrication du système de direction ; il ne revendique ni participation au Shell Eco-marathon, ni performance énergétique mesurée.", "Academic team project based on an existing chassis. The report documents steering-system design and manufacturing; it does not claim participation in the Shell Eco-marathon or measured energy-performance results."),
+      scope: copy("Projet académique réalisé en équipe à partir d'un châssis existant. Notre travail a porté sur la conception et la fabrication du système de direction, de l'analyse fonctionnelle à l'usinage et à l'assemblage.", "Academic team project based on an existing chassis. Our work focused on designing and manufacturing the steering system, from functional analysis through machining and assembly."),
     },
   },
   {
@@ -125,7 +125,7 @@ export const projects: Project[] = [
         item("Rendre le Kanban observable", "Make Kanban behavior visible", "La simulation relie consommation, seuil de stock et signal de réapprovisionnement. Elle sert à comprendre les blocages et le comportement des encours sur une équipe, notamment de 8 heures.", "The simulation connects consumption, inventory thresholds and replenishment signals. It helps explain blockages and work-in-progress behavior over a shift, including an 8-hour scenario."),
         item("Une base d’analyse réutilisable", "A reusable analysis foundation", "Les paramètres modifiables et l’export CSV permettent de répéter les essais et d’analyser les données générées en dehors de la visualisation.", "Configurable parameters and CSV export allow repeated experiments and analysis of generated data beyond the visualization."),
       ],
-      scope: copy("La ligne et ses stocks sont simulés. Le projet illustre la logique Kanban ; un dimensionnement industriel réel demanderait des données terrain et une validation adaptée.", "The production line and inventory are simulated. The project illustrates Kanban logic; real industrial stock sizing would require shop-floor data and appropriate validation."),
+      scope: copy("La ligne et les niveaux de stock sont simulés. Le modèle permet d'explorer le fonctionnement du flux tiré et l'effet des paramètres de réapprovisionnement.", "The production line and inventory levels are simulated. The model explores pull-flow behavior and the effect of replenishment settings."),
     },
   },
   {
@@ -150,7 +150,7 @@ export const projects: Project[] = [
         item("Relier un signal à une action", "Connect a signal to an action", "La boucle de simulation met en relation la dérive, les limites de contrôle et les interventions possibles pour explorer une logique de pilotage préventif.", "The simulation loop connects drift, control limits and possible interventions to explore preventive process management."),
         item("Distinguer stabilité et capabilité", "Distinguish stability from capability", "Les cartes de contrôle suivent le comportement du procédé, tandis que Cp/Cpk décrivent son positionnement par rapport aux tolérances retenues dans le modèle.", "Control charts track process behavior, while Cp/Cpk describe how it sits relative to the tolerances defined in the model."),
       ],
-      scope: copy("Il s’agit d’un procédé simulé et d’un support pédagogique, sans résultat de production réelle ni déploiement industriel revendiqué.", "This is a simulated process and an educational tool; no real production results or industrial deployment are claimed."),
+      scope: copy("Le projet utilise un procédé simulé pour illustrer l'évolution des cartes de contrôle, de Cp/Cpk et des décisions de maintenance.", "The project uses a simulated process to illustrate the evolution of control charts, Cp/Cpk and maintenance decisions."),
     },
   },
   {
@@ -175,7 +175,7 @@ export const projects: Project[] = [
         item("Un parcours de traitement structuré", "A structured processing workflow", "L’application réunit les étapes de chargement, prétraitement et visualisation pour faciliter l’exploration des données de mesure.", "The application brings together loading, preprocessing and visualization to simplify exploration of measurement data."),
         item("Une architecture plus lisible", "A clearer architecture", "Les responsabilités sont réparties entre modules afin de faciliter les corrections et les évolutions de l’interface et des traitements.", "Responsibilities are split across modules to make interface and processing fixes and extensions easier."),
       ],
-      scope: copy("Le projet porte sur l’outillage logiciel de l’analyse. Il ne revendique ni nouvelle méthode électrochimique ni performance de batterie démontrée.", "The project focuses on analysis software. It does not claim a new electrochemical method or demonstrated battery performance."),
+      scope: copy("Le travail porte sur l'outil d'import, de traitement et de visualisation des mesures EIS/DRT.", "The work focuses on importing, processing and visualizing EIS/DRT measurements."),
     },
   },
   {
@@ -199,7 +199,7 @@ export const projects: Project[] = [
       findings: [
         item("Relier besoin métier et serveur", "Connect business needs and backend", "Le projet mobilise la modélisation de données et la génération documentaire pour transformer un processus papier en traitement applicatif.", "The project combines data modeling and document generation to turn a paper-based process into an application workflow."),
       ],
-      scope: copy("Cette présentation décrit mon périmètre de contribution à l’API et à la génération documentaire ; elle ne publie aucun dossier client.", "This case study describes my contribution to the API and document generation; it does not publish customer files."),
+      scope: copy("La présentation se concentre sur ma contribution à l'API et à la génération documentaire. Les données client restent confidentielles.", "This case study focuses on my contribution to the API and document generation. Customer data remains confidential."),
     },
   },
   {
@@ -224,7 +224,7 @@ export const projects: Project[] = [
         item("Un parcours complet de transfert", "A complete transfer workflow", "Le prototype relie interface, serveur, base de données et communication événementielle autour d’un usage simple de partage de fichiers.", "The prototype connects interface, server, database and event-driven communication around a simple file-sharing workflow."),
         item("Des évolutions identifiées", "Identified next steps", "Authentification, chiffrement de bout en bout, contrôle des tailles, gestion des gros fichiers, sécurisation des événements et tests automatisés restent des axes d’amélioration.", "Authentication, end-to-end encryption, size controls, large-file handling, event security and automated tests remain areas for improvement."),
       ],
-      scope: copy("Prototype académique : un renforcement de la sécurité, de la robustesse et du déploiement serait nécessaire avant une utilisation en production.", "Academic prototype: security, robustness and deployment would need further work before production use."),
+      scope: copy("Le projet est un prototype académique. Les prochaines étapes identifiées concernent la sécurité, la gestion des fichiers volumineux et les tests automatisés.", "This is an academic prototype. The identified next steps cover security, large-file handling and automated testing."),
     },
   },
 ];

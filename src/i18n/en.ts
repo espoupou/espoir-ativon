@@ -108,7 +108,7 @@ export const en = {
     overview: "Project overview",
     approach: "Project approach",
     findings: "Results and lessons learned",
-    scope: "Scope and limitations",
+    scope: "Project context",
     problem: "Problem:",
     role: "Role:",
     contribution: "Contribution:"

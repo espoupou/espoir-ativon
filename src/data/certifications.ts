@@ -59,7 +59,6 @@ export const certifications: Certification[] = [
       "Initiation aux fondamentaux de Linux, à la ligne de commande et à l'environnement open source.",
       "Introduction to Linux fundamentals, the command line and the open-source environment.",
     ),
-    credentialUrl: "https://www.netacad.com/certificates/?issuanceId=9172234a-2c71-4a29-b46b-4d58462693eb",
   },
   {
     id: "arduino-workshop",
