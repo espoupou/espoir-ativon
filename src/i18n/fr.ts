@@ -147,7 +147,7 @@ export const fr = {
       },
       {
         name: "Industrie 4.0, automatisation et robotique",
-        items: "Industrie 4.0, usine intelligente, usine numérique, automatisation industrielle, automatisme avancé (académique), supervision industrielle, automates programmables (académique), robotique industrielle (académique), vision industrielle, intégration des systèmes industriels, acquisition de données industrielles, IIoT, digitalisation industrielle, systèmes de contrôle (académique), Node-RED, ESP32, MQTT, Cognex In-Sight."
+        items: "Industrie 4.0, usine intelligente, usine numérique, automatisation industrielle, automatisme avancé (académique), supervision industrielle, automates programmables (académique), robotique industrielle (académique), robotique télécommandée, commande de robots, systèmes embarqués, Arduino, prototypage électronique, vision industrielle, intégration des systèmes industriels, acquisition de données industrielles, IIoT, digitalisation industrielle, systèmes de contrôle (académique), Node-RED, ESP32, MQTT, Cognex In-Sight."
       },
       {
         name: "Logiciels industriels et systèmes d'information",
@@ -155,7 +155,7 @@ export const fr = {
       },
       {
         name: "Programmation et données",
-        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, analyse de données, visualisation de données, analyse statistique, régression, classification, fondamentaux du machine learning, automatisation des données, traitement de données, développement de tableaux de bord, Git, GitHub, GitHub Actions, Azure DevOps (familiarité)."
+        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, algorithmique, structures de données, programmation compétitive, résolution de problèmes algorithmiques, analyse de données, visualisation de données, analyse statistique, régression, classification, fondamentaux du machine learning, automatisation des données, traitement de données, développement de tableaux de bord, Git, GitHub, GitHub Actions, Azure DevOps (familiarité)."
       },
       {
         name: "IA générative et ingénierie de prompts",
@@ -167,11 +167,15 @@ export const fr = {
       },
       {
         name: "Simulation, ingénierie et conception",
-        items: "Simulation Arena, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, CAO mécanique, procédés de fabrication, simulation industrielle, recherche opérationnelle, modélisation des systèmes de production, simulation de flux, analyse de scénarios."
+        items: "Simulation Arena, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, TopSolid CAO/FAO, CAO mécanique, analyse fonctionnelle, diagrammes de contexte, diagrammes FAST, cahiers des charges fonctionnels, dessins techniques, conception mécanique, fabrication assistée par ordinateur, usinage CNC, fraisage, tournage, perçage, alésage, filetage, gammes d'usinage, sélection des matériaux, assemblage et essais, schémas cinématiques, conception de systèmes de direction, conception de véhicules durables, procédés de fabrication, simulation industrielle, recherche opérationnelle, modélisation des systèmes de production, simulation de flux, analyse de scénarios."
+      },
+      {
+        name: "Matériaux, énergie et recherche technique",
+        items: "Cellules solaires hybrides à pérovskite, matériaux photovoltaïques, architectures de dispositifs, sélection des matériaux, analyse de stabilité, mécanismes de dégradation, encapsulation, ingénierie de la fiabilité, dépôt à grande échelle, contrôle qualité en ligne, industrialisation, revue de littérature technique, rédaction scientifique."
       },
       {
         name: "Qualités professionnelles",
-        items: "Esprit analytique, résolution structurée de problèmes, collaboration interfonctionnelle, communication technique, formation et transfert de connaissances, coordination de projet, communication avec les parties prenantes, adaptabilité, autonomie, travail en équipe, expérience terrain, prise de décision basée sur les données."
+        items: "Esprit analytique, résolution structurée de problèmes, collaboration interfonctionnelle, communication technique, formation et transfert de connaissances, coordination de projet, communication avec les parties prenantes, leadership, gouvernance associative étudiante, coordination de trésorerie, engagement communautaire, collaboration en hackathon, adaptabilité, autonomie, travail en équipe, expérience terrain, prise de décision basée sur les données."
       }
     ]
   },

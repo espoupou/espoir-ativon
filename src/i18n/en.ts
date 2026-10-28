@@ -147,7 +147,7 @@ export const en = {
       },
       {
         name: "Industry 4.0, automation & robotics",
-        items: "Industry 4.0, smart manufacturing, digital factory, industrial automation, advanced automation (academic), industrial supervision, PLC systems (academic), industrial robotics (academic), industrial computer vision, industrial systems integration, industrial data acquisition, IIoT, industrial digitalization, control systems (academic), Node-RED, ESP32, MQTT, Cognex In-Sight."
+        items: "Industry 4.0, smart manufacturing, digital factory, industrial automation, advanced automation (academic), industrial supervision, PLC systems (academic), industrial robotics (academic), tele-guided robotics, robot control, embedded systems, Arduino, electronic prototyping, industrial computer vision, industrial systems integration, industrial data acquisition, IIoT, industrial digitalization, control systems (academic), Node-RED, ESP32, MQTT, Cognex In-Sight."
       },
       {
         name: "Industrial software & information systems",
@@ -155,7 +155,7 @@ export const en = {
       },
       {
         name: "Programming & data",
-        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, data analysis, data visualization, statistical analysis, regression, classification, machine learning fundamentals, data automation, data processing, dashboard development, Git, GitHub, GitHub Actions, Azure DevOps (familiarity)."
+        items: "Python, pandas, NumPy, Matplotlib, SQL, MySQL, PostgreSQL, algorithms, data structures, competitive programming, algorithmic problem solving, data analysis, data visualization, statistical analysis, regression, classification, machine learning fundamentals, data automation, data processing, dashboard development, Git, GitHub, GitHub Actions, Azure DevOps (familiarity)."
       },
       {
         name: "Generative AI & prompt engineering",
@@ -167,11 +167,15 @@ export const en = {
       },
       {
         name: "Simulation, engineering & design",
-        items: "Arena simulation, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, mechanical CAD, manufacturing processes, industrial simulation, operations research, production systems modeling, flow simulation, scenario analysis."
+        items: "Arena simulation, MATLAB, SolidWorks, CATIA V5, AutoCAD, SketchUp, TopSolid CAD/CAM, mechanical CAD, functional analysis, context diagrams, FAST diagrams, functional specifications, technical drawings, mechanical design, computer-aided manufacturing, CNC machining, milling, turning, drilling, reaming, threading, machining process planning, material selection, assembly and testing, kinematic diagrams, steering-system design, sustainable vehicle design, manufacturing processes, industrial simulation, operations research, production systems modeling, flow simulation, scenario analysis."
+      },
+      {
+        name: "Materials, energy & technical research",
+        items: "Hybrid perovskite solar cells, photovoltaic materials, device architectures, materials selection, stability analysis, degradation mechanisms, encapsulation, reliability engineering, scalable deposition, in-line quality control, manufacturing scale-up, technical literature review, scientific writing."
       },
       {
         name: "Professional strengths",
-        items: "Analytical thinking, structured problem solving, cross-functional collaboration, technical communication, training and knowledge transfer, project coordination, stakeholder communication, adaptability, autonomy, teamwork, industrial fieldwork, data-driven decision making."
+        items: "Analytical thinking, structured problem solving, cross-functional collaboration, technical communication, training and knowledge transfer, project coordination, stakeholder communication, leadership, student association governance, treasury coordination, community engagement, hackathon collaboration, adaptability, autonomy, teamwork, industrial fieldwork, data-driven decision making."
       }
     ]
   },
