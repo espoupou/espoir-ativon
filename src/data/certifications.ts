@@ -35,6 +35,7 @@ export const certifications: Certification[] = [
       "Programme intensif de 12 mois en génie logiciel avec spécialisation en développement serveur.",
       "Twelve-month intensive software engineering program with a back-end specialization.",
     ),
+    credentialUrl: "https://savanna.alxafrica.com/certificates/ECSB853smy",
   },
   {
     id: "arduino-workshop",
